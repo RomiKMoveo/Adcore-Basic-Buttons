@@ -217,7 +217,7 @@ section {
   max-width: var(--button-mini-fab-size);
   max-height: var(--button-mini-fab-size);
 
-  padding: 0 2px 5px;
+  padding: 2px 0;
 
   --mdc-fab-small-container-color: var(--lavender-mist);
   --mat-fab-small-foreground-color: var(--squid-ink);
