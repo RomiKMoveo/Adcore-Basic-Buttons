@@ -4,6 +4,7 @@ import { BasicButtonsComponent } from './basic-buttons/basic-buttons.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { CardComponent } from './card/card.component';
 
 /**
  * @title Basic buttons
@@ -17,10 +18,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    CardComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'adcore-basic-buttons';
-}
+export class AppComponent {}
