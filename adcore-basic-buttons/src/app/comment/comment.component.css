@@ -1,0 +1,118 @@
+section {
+  display: table;
+  margin-left: 30px;
+  padding-bottom: 40px;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+:root,
+:host {
+  /*COLORS*/
+  --black: #000000;
+  --white: #ffffffff;
+  --light-grey: #e5e5e5;
+  --navy-blue: #172b4d;
+  --dark-navy-blue: #172b4d99;
+  --outline-blue: #3250a2;
+  --error-red: #c74538;
+
+  /*FONT WEIGHTS*/
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+
+  /*TYPOGRAPHY*/
+  --font-family: "Raleway";
+  --placeholder-font-size: 14px;
+  ---bottom-text-font-size: 12px;
+
+  /*SIZES*/
+  --border-width: 1px;
+  --border-radius: 4px;
+  --box-with: 275px;
+  --box-height: 40px;
+  --box-width: 275px;
+}
+
+/************************************************************************************/
+
+::ng-deep .mat-mdc-form-field {
+  --mdc-outlined-text-field-container-shape: var(--border-radius);
+  --mdc-outlined-text-field-container-width: 200px !important;
+  --mat-form-field-container-text-line-height: 16px;
+  --mat-form-field-container-height: 40px;
+
+  /*abel*/
+  --mdc-outlined-text-field-label-text-color: var(--dark-navy-blue);
+  --mdc-outlined-text-field-label-text-size: var(--placeholder-font-size);
+  --mdc-outlined-text-field-label-text-weight: var(--font-weight-medium);
+  --mdc-outlined-text-field-label-text-font: var(--font-family) !important;
+  --mdc-outlined-text-field-disabled-label-text-color: var(--light-grey);
+  --mdc-outlined-text-field-error-label-text-color: var(--dark-navy-blue);
+  --mdc-outlined-text-field-error-hover-label-text-color: var(--dark-navy-blue);
+
+  /*Input text*/
+  --mdc-outlined-text-field-input-text-color: var(--navy-blue);
+
+  /*Placeholder*/
+  --mdc-outlined-text-field-input-text-placeholder-color: var(--dark-navy-blue);
+
+  /*Border colors*/
+  --mdc-outlined-text-field-outline-color: var(--light-grey);
+  --mdc-outlined-text-field-focus-outline-color: var(--outline-blue);
+  --mdc-outlined-text-field-hover-outline-color: var(--outline-blue);
+  --mdc-outlined-text-field-disabled-outline-color: var(--light-grey);
+  --mdc-outlined-text-field-error-outline-color: var(--light-grey);
+  --mdc-outlined-text-field-error-focus-outline-color: var(--error-red);
+  --mdc-outlined-text-field-error-hover-outline-color: var(--outline-blue);
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  max-height: none;
+  min-width: var(--box-width);
+}
+::ng-deep .mdc-text-field-outline {
+  --mdc-outlined-text-field-outline-width: var(--border-width) !important;
+}
+::ng-deep .mat-mdc-form-field .mdc-notched-outline__notch {
+  border-left: none !important;
+}
+
+::ng-deep .mdc-text-field--outlined .mat-mdc-form-field-infix {
+  font-size: var(--placeholder-font-size);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+}
+
+::ng-deep .mat-mdc-form-field-flex {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  flex: 1;
+  display: flex;
+}
+
+::ng-deep .mat-mdc-form-field-error-wrapper {
+  padding: 0 0 0 0 !important;
+}
+
+::ng-deep .mat-mdc-form-field-hint-wrapper {
+  padding: 0 0 0 0 !important;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  font-family: var(--font-family) !important;
+  font-size: var(---bottom-text-font-size) !important;
+  letter-spacing: var(--mat-form-field-subscript-text-tracking);
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--dark-navy-blue) !important;
+}

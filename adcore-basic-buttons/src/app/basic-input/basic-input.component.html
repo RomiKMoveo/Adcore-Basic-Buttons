@@ -1,0 +1,77 @@
+<section>
+  <div class="example-label">Disabled</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <input matInput placeholder="Company name" disabled />
+    @if (isDisabled) {
+    <button matSuffix mat-icon-button aria-label="Clear" disabled>
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Regular</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <input
+      matInput
+      placeholder="Company name"
+      [(ngModel)]="value"
+      (focus)="hasFocus = true"
+      (blur)="hasFocus = false"
+    />
+    @if (value) {
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Error</div>
+  <mat-form-field appearance="outline" color="warn">
+    <mat-label>Company name</mat-label>
+    <input
+      matInput
+      placeholder="Company name"
+      [(ngModel)]="errorValue"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (errorValue) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="clearErrorInput()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+    <mat-error>{{ errorMessage() }}</mat-error>
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Supporting Text</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <input
+      matInput
+      #message
+      maxlength="256"
+      placeholder="Company name"
+      [(ngModel)]="value"
+    />
+    <mat-hint align="start">Supporting text</mat-hint>
+    <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+    @if (value) {
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+  </mat-form-field>
+</section>

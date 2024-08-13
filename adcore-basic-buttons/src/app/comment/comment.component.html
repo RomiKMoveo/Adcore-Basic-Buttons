@@ -1,0 +1,52 @@
+<section>
+  <div class="example-label">Disabled</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <textarea matInput placeholder="Company name" disabled></textarea>
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Regular</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <textarea
+      matInput
+      placeholder="Company name"
+      [(ngModel)]="value"
+      (focus)="hasFocus = true"
+      (blur)="hasFocus = false"
+    ></textarea>
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Error</div>
+  <mat-form-field appearance="outline" color="warn">
+    <mat-label>Company name</mat-label>
+    <textarea
+      matInput
+      placeholder="Company name"
+      [(ngModel)]="errorValue"
+      (blur)="updateErrorMessage()"
+      required
+    ></textarea>
+    <mat-error>{{ errorMessage() }}</mat-error>
+  </mat-form-field>
+</section>
+
+<section>
+  <div class="example-label">Supporting Text</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Company name</mat-label>
+    <textarea
+      matInput
+      #message
+      maxlength="256"
+      placeholder="Company name"
+      [(ngModel)]="value"
+    ></textarea>
+    <mat-hint align="start">Supporting text</mat-hint>
+    <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+  </mat-form-field>
+</section>

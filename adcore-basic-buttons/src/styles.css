@@ -12,6 +12,7 @@ body {
   --black: #000000;
   --white: #ffffffff;
   --squid-ink: #172b4d;
+  --dark-squid-ink: #172b4d99;
   --marian-blue: #263e80;
   --violet-blue: #3250a2;
   --anti-flash-white: #eeecef;
@@ -21,7 +22,8 @@ body {
   --pale-aqua-opacity: #cad3e74d;
   --disabled-button-container-color: #cbd3e8;
   --disabled-button-text-color: #acb8d9;
-
+  --light-grey: #e5e5e5;
+  --error-red: #c74538;
   --card-shadow: #00000026;
 
   /*typography*/
@@ -54,6 +56,15 @@ body {
   --card-button-horizontal-padding: 30px;
   --card-button-right-padding: 20px;
   --card-button-vertical-padding: 30px;
+
+  /*input size*/
+  --placeholder-font-size: 14px;
+  --input-text-font-size: 12px;
+  --input-border-width: 1px;
+  --input-border-radius: 4px;
+  --input-box-with: 275px;
+  --input-box-height: 40px;
+  --input-box-width: 275px;
 
   /************************************ BUTTONS ************************************/
 
@@ -89,7 +100,6 @@ body {
     --outlined-button-horizontal-padding
   );
 
-  /*here*/
   --mat-outlined-button-state-layer-color: var(--pale-aqua-opacity);
   --mat-outlined-button-hover-state-layer-opacity: 0.3;
 
@@ -227,7 +237,6 @@ body {
   border: 2px solid var(--disabled-button-container-color) !important;
 }
 
-/* Apply box-sizing border-box to ensure padding is within the border */
 button.mat-mdc-outlined-button,
 button.mat-mdc-filled-button,
 button.mat-mdc-stroked-button {
@@ -235,7 +244,6 @@ button.mat-mdc-stroked-button {
   border-color: transparent;
 }
 
-/* Ensure hover state covers the full button area */
 button.mat-mdc-outlined-button:hover,
 button.mat-mdc-filled-button:hover,
 button.mat-mdc-stroked-button:hover {
@@ -332,4 +340,119 @@ mat-card {
   padding-left: var(--card-button-horizontal-padding) !important;
   padding-top: 35px !important;
   padding-bottom: 23px !important;
+}
+
+/************************************ INPUT ************************************/
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-container-shape: var(
+    --input-border-radius
+  ) !important;
+  --mdc-outlined-text-field-container-width: 200px !important;
+  --mat-form-field-container-text-line-height: 16px !important;
+  --mat-form-field-container-max-height: 40px !important;
+
+  /*Label*/
+  --mdc-outlined-text-field-label-text-color: var(--dark-squid-ink) !important;
+  --mdc-outlined-text-field-label-text-size: var(
+    --placeholder-font-size
+  ) !important;
+  --mdc-outlined-text-field-label-text-weight: var(--font-weight-medium);
+  --mdc-outlined-text-field-label-text-font: var(--font-family) !important;
+  --mdc-outlined-text-field-disabled-label-text-color: var(
+    --light-grey
+  ) !important;
+  --mdc-outlined-text-field-error-label-text-color: var(
+    --dark-squid-ink
+  ) !important;
+  --mdc-outlined-text-field-error-hover-label-text-color: var(
+    --error-red
+  ) !important;
+
+  /*Input text*/
+  --mdc-outlined-text-field-input-text-color: var(--squid-ink) !important;
+
+  /*Placeholder*/
+  --mdc-outlined-text-field-input-text-placeholder-color: var(
+    --dark-squid-ink
+  ) !important;
+
+  /*Border colors*/
+  --mdc-outlined-text-field-outline-color: var(--light-grey) !important;
+  --mdc-outlined-text-field-focus-outline-color: var(--violet-blue) !important;
+  --mdc-outlined-text-field-hover-outline-color: var(--violet-blue) !important;
+  --mdc-outlined-text-field-disabled-outline-color: var(
+    --light-grey
+  ) !important;
+  --mdc-outlined-text-field-error-outline-color: var(--light-grey) !important;
+  --mdc-outlined-text-field-error-focus-outline-color: var(
+    --error-red
+  ) !important;
+  --mdc-outlined-text-field-error-hover-outline-color: var(
+    --violet-blue
+  ) !important;
+
+  --mat-tree-node-min-height: 40px !important;
+  --mat-form-field-filled-with-label-container-padding-bottom: 12px !important;
+  --mat-form-field-container-vertical-padding: 12px !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  text-align: center !important;
+  min-width: var(--input-box-width) !important;
+}
+
+.mdc-text-field-outline {
+  --mdc-outlined-text-field-outline-width: var(--border-width) !important;
+}
+
+.mat-mdc-form-field .mdc-notched-outline__notch {
+  border-left: none !important;
+}
+
+.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  font-size: var(--placeholder-font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  font-family: var(--font-family) !important;
+}
+
+.mat-mdc-form-field-flex {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.mat-mdc-form-field-infix {
+  flex: 1 !important;
+  display: flex !important;
+}
+
+.mat-mdc-form-field-error-wrapper,
+.mat-mdc-form-field-hint-wrapper {
+  padding: 0 !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  font-family: var(--font-family) !important;
+  font-size: var(--input-text-font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--dark-squid-ink) !important;
+}
+
+.mat-mdc-form-field-hint-wrapper {
+  font-family: var(--font-family) !important;
+  font-size: var(--input-text-font-size) !important;
+  letter-spacing: var(--mat-form-field-subscript-text-tracking) !important;
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--dark-squid-ink) !important;
+}
+
+.mat-mdc-form-field-error {
+  display: flex !important;
+  padding-top: 7.5px !important;
+  color: var(--error-red) !important;
+  font-size: 12px !important;
+}
+
+.mdc-text-field--outlined .mat-mdc-form-field-infix,
+.mdc-text-field--no-label .mat-mdc-form-field-infix {
+  padding-top: var(--mat-form-field-container-vertical-padding);
 }
