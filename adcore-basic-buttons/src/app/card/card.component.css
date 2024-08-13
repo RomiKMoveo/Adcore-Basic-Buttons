@@ -1,0 +1,22 @@
+section {
+  display: flex;
+  margin-left: 30px;
+}
+
+.example-label {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 300px;
+  padding-bottom: 70px;
+}
+
+.example-card {
+  display: table;
+  margin: 8px 0 8px 0;
+}
+.example-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

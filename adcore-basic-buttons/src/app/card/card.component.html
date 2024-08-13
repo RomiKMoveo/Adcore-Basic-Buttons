@@ -1,0 +1,91 @@
+<section>
+  <div class="example-label">Basic card</div>
+  <div class="example-card">
+    <mat-card appearance="outlined">
+      <mat-card-content>Simple card</mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Card with actions alignment option</div>
+  <div class="example-card">
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title> Title</mat-card-title>
+        <mat-card-subtitle>Description text</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-flat-button>Learn more</button>
+      </mat-card-actions>
+    </mat-card>
+    <br />
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Title</mat-card-title>
+        <mat-card-subtitle>Description text</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions align="end">
+        <button mat-flat-button>Learn more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Card with multiple sections</div>
+  <div class="example-card">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Shiba Inu</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button>Share</button>
+        <button mat-fab extended>
+          <mat-icon>link</mat-icon>
+          Copy link
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Card with footer</div>
+  <div class="example-card">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Chihuahua</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ longText }}</p>
+      </mat-card-content>
+      <mat-card-footer class="example-card-footer">
+        <mat-chip-set aria-label="Chihuahua traits">
+          <mat-chip>Charming</mat-chip>
+          <mat-chip>Graceful</mat-chip>
+          <mat-chip>Sassy</mat-chip>
+        </mat-chip-set>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</section>
