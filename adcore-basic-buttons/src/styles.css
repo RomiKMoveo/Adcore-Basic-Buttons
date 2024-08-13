@@ -68,7 +68,7 @@ body {
   --mdc-text-button-container-shape: var(--button-shape);
   --mat-text-button-horizontal-padding: var(--button-horizontal-padding);
 
-  --mat-text-button-state-layer-color: var(--pale-aqua);
+  --mat-text-button-state-layer-color: var(--pale-aqua-opacity);
   --mat-text-button-hover-state-layer-opacity: 0.3;
 
   --mdc-text-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
@@ -89,7 +89,8 @@ body {
     --outlined-button-horizontal-padding
   );
 
-  --mat-outlined-button-state-layer-color: var(--pale-aqua);
+  /*here*/
+  --mat-outlined-button-state-layer-color: var(--pale-aqua-opacity);
   --mat-outlined-button-hover-state-layer-opacity: 0.3;
 
   --mdc-outlined-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
@@ -226,6 +227,24 @@ body {
   border: 2px solid var(--disabled-button-container-color) !important;
 }
 
+/* Apply box-sizing border-box to ensure padding is within the border */
+button.mat-mdc-outlined-button,
+button.mat-mdc-filled-button,
+button.mat-mdc-stroked-button {
+  box-sizing: border-box;
+  border-color: transparent;
+}
+
+/* Ensure hover state covers the full button area */
+button.mat-mdc-outlined-button:hover,
+button.mat-mdc-filled-button:hover,
+button.mat-mdc-stroked-button:hover {
+  background-color: var(--mat-outlined-button-state-layer-color) !important;
+}
+
+.mdc-button:hover {
+  background-color: var(--mat-outlined-button-state-layer-color) !important;
+}
 /************************************ CARDS ************************************/
 mat-card {
   border: none !important;
