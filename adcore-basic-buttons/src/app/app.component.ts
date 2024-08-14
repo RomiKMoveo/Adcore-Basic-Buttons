@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './card/card.component';
 import { BasicInputComponent } from './basic-input/basic-input.component';
 import { CommentComponent } from './comment/comment.component';
+import { BadgeComponent } from './badge/badge.component';
 
 /**
  * @title Basic buttons
@@ -23,6 +24,7 @@ import { CommentComponent } from './comment/comment.component';
     CardComponent,
     BasicInputComponent,
     CommentComponent,
+    BadgeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

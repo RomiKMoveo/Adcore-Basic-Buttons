@@ -1,8 +1,8 @@
-.basic-input-container {
+.page-layout {
   padding: 50px 0 0 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 300px;
+  gap: 20px;
 }
