@@ -4,7 +4,6 @@ body {
 }
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -56,7 +55,7 @@ body {
   --card-img-border-radius: 4px;
   --card-button-horizontal-padding: 30px;
   --card-button-right-padding: 20px;
-  --card-button-vertical-padding: 30px;
+  --card-button-vertical-padding: 34px;
 
   /*input size*/
   --placeholder-font-size: 14px;
@@ -176,12 +175,14 @@ body {
 }
 
 .mat-icon {
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-normal);
   font-size: var(--button-icon-font-size);
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 22px !important;
+  height: 24px !important;
+  width: 24px !important;
 }
 
 .mat-mdc-extended-fab > .mat-icon,
@@ -294,7 +295,7 @@ mat-card {
 .mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-subtitle,
 .mat-mdc-card-title-group .mat-mdc-card-title,
 .mat-mdc-card-title-group .mat-mdc-card-subtitle {
-  padding-top: 15px !important;
+  padding-top: 17px !important;
 }
 
 .mat-mdc-card-actions {
@@ -330,7 +331,8 @@ mat-card {
   box-sizing: content-box !important;
   padding-left: var(--card-button-horizontal-padding) !important;
   padding-right: var(--card-button-horizontal-padding) !important;
-  gap: 20px !important;
+  padding-top: 3px !important;
+  gap: 28px !important;
 
   color: var(--squid-ink) !important;
   font-size: var(--font-size) !important;
@@ -343,7 +345,7 @@ mat-card {
   box-sizing: content-box !important;
   padding-left: var(--card-button-horizontal-padding) !important;
   padding-top: 35px !important;
-  padding-bottom: 23px !important;
+  padding-bottom: 24px !important;
 }
 
 /************************************ INPUT ************************************/
@@ -468,22 +470,46 @@ mat-card {
 }
 
 /************************************ BADGE ************************************/
+
 .mat-badge-large .mat-badge-content {
-  background-color: #2aba7d !important;
+  background-color: var(--jungle-green) !important;
   font-family: var(--font-family) !important;
   font-size: var(--badge-font-size) !important;
   color: white !important;
-  font-weight: var(--font-weight-medium) !important;
+  font-weight: var(--font-weight-normal) !important;
+
+  width: auto !important;
+  display: grid !important;
+  text-align: center !important;
+  align-items: center !important;
+  right: -25px;
 }
 
 .mat-badge-medium .mat-badge-content {
-  background-color: #2aba7d !important;
+  background-color: var(--jungle-green) !important;
   font-family: var(--font-family) !important;
   font-size: var(--badge-font-size) !important;
   color: white !important;
-  font-weight: var(--font-weight-medium) !important;
+  font-weight: var(--font-weight-normal) !important;
+
+  width: auto !important;
+  display: grid !important;
+  text-align: center !important;
+  align-items: center !important;
+  height: 14px !important;
+  top: 0px !important;
 }
 
 .mat-badge-small .mat-badge-content {
   background-color: #2aba7d !important;
+
+  top: 5px !important;
+  height: 1px !important;
+  display: grid !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.mat-badge-medium.mat-badge-overlap .mat-badge-content {
+  top: 1px !important;
 }
