@@ -12,8 +12,8 @@ body {
   --white: #ffffffff;
   --squid-ink: #172b4d;
   --dark-squid-ink: #172b4d99;
-  --marian-blue: #263e80;
   --violet-blue: #3250a2;
+  --violet-blue-opacity: #3250a266;
   --anti-flash-white: #eeecef;
   --neon-silver: #cbcbcb;
   --lavender-mist: #d5e1ff;
@@ -25,6 +25,9 @@ body {
   --error-red: #c74538;
   --card-shadow: #00000026;
   --jungle-green: #2aba7d;
+  --checkbox-hover: #bcbcbc4d;
+  --checkbox-hover-opacity: #bcbcbc80;
+  --checkbox-border-color: #bcbcbc;
 
   /*typography*/
   --font-family: "Raleway";
@@ -69,6 +72,9 @@ body {
   /*badge size*/
   --badge-font-size: 12px;
 
+  /*checkbox size*/
+  --cheeckbox-height: 14px;
+  --cheeckbox-width: 14px;
   /************************************ BUTTONS ************************************/
 
   /*basic*/
@@ -501,7 +507,7 @@ mat-card {
 }
 
 .mat-badge-small .mat-badge-content {
-  background-color: #2aba7d !important;
+  background-color: var(--jungle-green) !important;
 
   top: 5px !important;
   height: 1px !important;
@@ -513,3 +519,53 @@ mat-card {
 .mat-badge-medium.mat-badge-overlap .mat-badge-content {
   top: 1px !important;
 }
+
+/************************************ CHECKBOX ************************************/
+
+.mat-accent.mat-mdc-checkbox {
+  --mdc-checkbox-selected-focus-icon-color: var(--violet-blue);
+  --mdc-checkbox-selected-hover-icon-color: var(--violet-blue);
+  --mdc-checkbox-selected-icon-color: var(--violet-blue);
+  --mdc-checkbox-selected-focus-state-layer-color: var(
+    --checkbox-hover
+  ) !important;
+  --mdc-checkbox-selected-hover-state-layer-color: var(--checkbox-hover);
+
+  --mdc-checkbox-unselected-focus-icon-color: var(--checkbox-border-color);
+  --mdc-checkbox-unselected-hover-icon-color: var(--checkbox-border-color);
+  --mdc-checkbox-unselected-pressed-state-layer-color: var(
+    --checkbox-hover-opacity
+  );
+
+  --mat-checkbox-disabled-label-color: var(--violet-blue-opacity) !important;
+  --mdc-checkbox-disabled-selected-icon-color: var(
+    --violet-blue-opacity
+  ) !important;
+}
+
+.mat-mdc-checkbox .mat-internal-form-field {
+  --mat-checkbox-label-text-color: var(--squid-ink);
+  --mat-checkbox-label-text-font: var(--font-family);
+  --mat-checkbox-label-text-line-height: var(--line-height);
+  --mat-checkbox-label-text-size: var(--font-size);
+  --mat-checkbox-label-text-weight: var(--font-weight-medium);
+
+  --mat-checkbox-label-text-color: var(--squid-ink);
+}
+
+.mat-internal-form-field > label {
+  padding: unset !important;
+}
+
+.mdc-checkbox__background {
+  width: var(--cheeckbox-width);
+  height: var(--cheeckbox-height);
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+/************************************ RADIO ************************************/
+
+/************************************ TOOLTIP ************************************/
+
+/************************************ TOOLBAR ************************************/
