@@ -12,3 +12,12 @@ section {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
 }
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+.example-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

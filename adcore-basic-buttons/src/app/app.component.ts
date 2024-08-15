@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component';
 import { BasicInputComponent } from './basic-input/basic-input.component';
 import { CommentComponent } from './comment/comment.component';
 import { BadgeComponent } from './badge/badge.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 /**
  * @title Basic buttons
@@ -25,6 +26,7 @@ import { BadgeComponent } from './badge/badge.component';
     BasicInputComponent,
     CommentComponent,
     BadgeComponent,
+    CheckboxComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
