@@ -9,6 +9,11 @@ import { BasicInputComponent } from './basic-input/basic-input.component';
 import { CommentComponent } from './comment/comment.component';
 import { BadgeComponent } from './badge/badge.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioComponent } from './radio/radio.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ListComponent } from './list/list.component';
+import { DividerComponent } from './divider/divider.component';
 
 /**
  * @title Basic buttons
@@ -27,6 +32,11 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     CommentComponent,
     BadgeComponent,
     CheckboxComponent,
+    RadioComponent,
+    TooltipComponent,
+    ToolbarComponent,
+    ListComponent,
+    DividerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

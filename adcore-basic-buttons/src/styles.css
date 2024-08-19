@@ -13,21 +13,17 @@ body {
   --squid-ink: #172b4d;
   --dark-squid-ink: #172b4d99;
   --violet-blue: #3250a2;
-  --violet-blue-opacity: #3250a266;
   --anti-flash-white: #eeecef;
   --neon-silver: #cbcbcb;
   --lavender-mist: #d5e1ff;
-  --pale-aqua: #cad3e7;
-  --pale-aqua-opacity: #cad3e74d;
+  --pale-aqua: #cad3e74d;
   --disabled-button-container-color: #cbd3e8;
   --disabled-button-text-color: #acb8d9;
   --light-grey: #e5e5e5;
   --error-red: #c74538;
   --card-shadow: #00000026;
   --jungle-green: #2aba7d;
-  --checkbox-hover: #bcbcbc4d;
-  --checkbox-hover-opacity: #bcbcbc80;
-  --checkbox-border-color: #bcbcbc;
+  --checkbox-grey: #bcbcbc;
 
   /*typography*/
   --font-family: "Raleway";
@@ -75,6 +71,12 @@ body {
   /*checkbox size*/
   --cheeckbox-height: 14px;
   --cheeckbox-width: 14px;
+
+  /*list size*/
+
+  /*divider size*/
+  --divider-width: 1px;
+  --divider-length: 100%;
   /************************************ BUTTONS ************************************/
 
   /*basic*/
@@ -88,7 +90,7 @@ body {
   --mdc-text-button-container-shape: var(--button-shape);
   --mat-text-button-horizontal-padding: var(--button-horizontal-padding);
 
-  --mat-text-button-state-layer-color: var(--pale-aqua-opacity);
+  --mat-text-button-state-layer-color: var(--pale-aqua);
   --mat-text-button-hover-state-layer-opacity: 0.3;
 
   --mdc-text-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
@@ -109,7 +111,7 @@ body {
     --outlined-button-horizontal-padding
   );
 
-  --mat-outlined-button-state-layer-color: var(--pale-aqua-opacity);
+  --mat-outlined-button-state-layer-color: var(--pale-aqua);
   --mat-outlined-button-hover-state-layer-opacity: 0.3;
 
   --mdc-outlined-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
@@ -227,7 +229,7 @@ body {
   --mdc-fab-label-text-font: var(--font-family) !important;
   --mdc-fab-label-text-size: var(--font-size) !important;
 
-  --mat-fab-state-layer-color: var(--pale-aqua-opacity) !important;
+  --mat-fab-state-layer-color: var(--pale-aqua) !important;
   --mat-fab-hover-state-layer-opacity: 1;
 
   --mdc-extended-fab-disabled-layer-color: var(--white) !important;
@@ -337,7 +339,7 @@ mat-card {
   box-sizing: content-box !important;
   padding-left: var(--card-button-horizontal-padding) !important;
   padding-right: var(--card-button-horizontal-padding) !important;
-  padding-top: 3px !important;
+  padding-top: 19px !important;
   gap: 28px !important;
 
   color: var(--squid-ink) !important;
@@ -527,20 +529,16 @@ mat-card {
   --mdc-checkbox-selected-hover-icon-color: var(--violet-blue);
   --mdc-checkbox-selected-icon-color: var(--violet-blue);
   --mdc-checkbox-selected-focus-state-layer-color: var(
-    --checkbox-hover
+    --checkbox-grey
   ) !important;
-  --mdc-checkbox-selected-hover-state-layer-color: var(--checkbox-hover);
+  --mdc-checkbox-selected-hover-state-layer-color: var(--checkbox-grey);
 
-  --mdc-checkbox-unselected-focus-icon-color: var(--checkbox-border-color);
-  --mdc-checkbox-unselected-hover-icon-color: var(--checkbox-border-color);
-  --mdc-checkbox-unselected-pressed-state-layer-color: var(
-    --checkbox-hover-opacity
-  );
+  --mdc-checkbox-unselected-focus-icon-color: var(--checkbox-grey);
+  --mdc-checkbox-unselected-hover-icon-color: var(--checkbox-grey);
+  --mdc-checkbox-unselected-pressed-state-layer-color: var(--checkbox-grey);
 
-  --mat-checkbox-disabled-label-color: var(--violet-blue-opacity) !important;
-  --mdc-checkbox-disabled-selected-icon-color: var(
-    --violet-blue-opacity
-  ) !important;
+  --mat-checkbox-disabled-label-color: var(--violet-blue) !important;
+  --mdc-checkbox-disabled-selected-icon-color: var(--violet-blue) !important;
 }
 
 .mat-mdc-checkbox .mat-internal-form-field {
@@ -565,7 +563,51 @@ mat-card {
 }
 
 /************************************ RADIO ************************************/
+.mat-accent.mat-mdc-radio-button {
+  --mdc-radio-selected-focus-icon-color: var(--violet-blue);
+  --mdc-radio-selected-hover-icon-color: var(--violet-blue);
+  --mdc-radio-selected-icon-color: var(--violet-blue);
+  --mdc-radio-selected-pressed-icon-color: var(--violet-blue);
+  --mat-radio-checked-ripple-color: var(--pale-aqua);
+}
 
+.mat-mdc-radio-button .mat-internal-form-field {
+  color: var(--squid-ink) !important;
+  font-family: var(--font-family) !important;
+  line-height: var(--line-height) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+section[_ngcontent-ng-c2708097669] {
+  font-family: "Raleway", sans-serif;
+}
+.mat-radio-group {
+  padding-bottom: 23px !important;
+}
 /************************************ TOOLTIP ************************************/
 
 /************************************ TOOLBAR ************************************/
+
+/************************************ LIST ************************************/
+.mdc-list-item__primary-text {
+  color: var(--squid-ink) !important;
+  font-family: var(--font-family) !important;
+  line-height: var(--line-height) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  letter-spacing: 0px !important;
+}
+
+/************************************ DIVIDER ************************************/
+
+.mat-divider {
+  --mat-divider-color: var(--light-grey) !important;
+  --mat-divider-width: var(--divider-width) !important;
+  --mat-divider-height: var(--divider-height) !important;
+  --mat-divider-length: var(--divider-length) !important;
+  min-width: 543px !important;
+
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-left: 16px !important;
+}
