@@ -1,0 +1,35 @@
+<section>
+  <div class="example-label"></div>
+  <mat-radio-group name="flavors">
+    <mat-radio-button value="chocolate" checked="true"
+      >Chocolate</mat-radio-button
+    >
+    <mat-radio-button value="vanilla">Vanilla</mat-radio-button>
+    <mat-radio-button value="strawberry">Strawberry</mat-radio-button>
+  </mat-radio-group>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Pick your favorite season</div>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    [(ngModel)]="favoriteSeason"
+  >
+    @for (season of seasons; track season) {
+    <mat-radio-button [value]="season">{{ season }}</mat-radio-button>
+    }
+  </mat-radio-group>
+  <div>Your favorite season is: {{ favoriteSeason }}</div>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Basic radios</div>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group>
+</section>
