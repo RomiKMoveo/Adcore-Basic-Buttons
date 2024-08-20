@@ -1,1 +1,51 @@
-<p>list works!</p>
+<section>
+  <div class="example-label">Basic list</div>
+  <mat-list role="list">
+    <mat-list-item role="listitem">Item 1</mat-list-item>
+    <mat-list-item role="listitem">Item 2</mat-list-item>
+    <mat-list-item role="listitem">Item 3</mat-list-item>
+  </mat-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">List with sections</div>
+  <mat-list>
+    <div mat-subheader>Folders</div>
+    @for (folder of folders; track folder) {
+    <mat-list-item>
+      <mat-icon matListItemIcon>folder</mat-icon>
+      <!-- <mat-icon svgIcon="unicorn"></mat-icon> -->
+      <div matListItemTitle>{{ folder.name }}</div>
+      <div matListItemLine>{{ folder.updated | date }}</div>
+    </mat-list-item>
+    }
+  </mat-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">List with selection</div>
+  <mat-selection-list #shoes>
+    @for (shoe of typesOfShoes; track shoe) {
+    <mat-list-option>{{ shoe }}</mat-list-option>
+    }
+  </mat-selection-list>
+
+  <p>Options selected: {{ shoes.selectedOptions.selected.length }}</p>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">List with single selection</div>
+  <mat-selection-list #shoes [multiple]="false">
+    @for (shoe of typesOfShoes; track shoe) {
+    <mat-list-option>{{ shoe }}</mat-list-option>
+    }
+  </mat-selection-list>
+
+  <p>Options selected: {{ shoes.selectedOptions.selected.length }}</p>
+</section>

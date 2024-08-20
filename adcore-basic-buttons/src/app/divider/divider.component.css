@@ -1,0 +1,28 @@
+section {
+  display: table;
+  margin-left: 30px;
+  padding-bottom: 40px;
+}
+
+.example-label {
+  display: table-caption;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+.example-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.example-section {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 16px !important;
+}
