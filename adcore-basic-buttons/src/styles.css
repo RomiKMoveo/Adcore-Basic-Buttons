@@ -16,7 +16,9 @@ body {
   --anti-flash-white: #eeecef;
   --neon-silver: #cbcbcb;
   --lavender-mist: #d5e1ff;
-  --pale-aqua: #cad3e74d;
+  --pale-aqua: #cad3e7;
+  --button-hover-pale-aqua: #cad3e74d;
+  --button-hover-dark-blue: #263e80;
   --disabled-button-container-color: #cbd3e8;
   --disabled-button-text-color: #acb8d9;
   --light-grey: #e5e5e5;
@@ -24,7 +26,7 @@ body {
   --card-shadow: #00000026;
   --jungle-green: #2aba7d;
   --checkbox-grey: #bcbcbc;
-
+  --list-option-radio-grey: #d1cac6;
   /*typography*/
   --font-family: "Raleway";
   --font-weight-bold: 700;
@@ -73,6 +75,8 @@ body {
   --cheeckbox-width: 14px;
 
   /*list size*/
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
 
   /*divider size*/
   --divider-width: 1px;
@@ -90,8 +94,7 @@ body {
   --mdc-text-button-container-shape: var(--button-shape);
   --mat-text-button-horizontal-padding: var(--button-horizontal-padding);
 
-  --mat-text-button-state-layer-color: var(--pale-aqua);
-  --mat-text-button-hover-state-layer-opacity: 0.3;
+  --mat-text-button-state-layer-color: var(--button-hover-pale-aqua);
 
   --mdc-text-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
 
@@ -111,8 +114,7 @@ body {
     --outlined-button-horizontal-padding
   );
 
-  --mat-outlined-button-state-layer-color: var(--pale-aqua);
-  --mat-outlined-button-hover-state-layer-opacity: 0.3;
+  --mat-outlined-button-state-layer-color: var(--button-hover-pale-aqua);
 
   --mdc-outlined-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
   --mdc-outlined-button-disabled-outline-color: rgba(50, 80, 162, 0.4);
@@ -131,7 +133,7 @@ body {
   --mdc-filled-button-disabled-container-color: rgba(50, 80, 162, 0.25);
   --mdc-filled-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
 
-  --mat-filled-button-state-layer-color: var(--marian-blue);
+  --mat-filled-button-state-layer-color: var(--button-hover-dark-blue);
   --mat-filled-button-hover-state-layer-opacity: 1;
 
   /*icon*/
@@ -180,6 +182,9 @@ body {
   --mdc-chip-label-text-weight: var(--font-weight-medium);
   --mdc-chip-outline-width: 1px;
   --mdc-chip-outline-color: var(--squid-ink);
+
+  /*list*/
+  --mat-ripple-color: transparent !important;
 }
 
 .mat-icon {
@@ -229,7 +234,7 @@ body {
   --mdc-fab-label-text-font: var(--font-family) !important;
   --mdc-fab-label-text-size: var(--font-size) !important;
 
-  --mat-fab-state-layer-color: var(--pale-aqua) !important;
+  --mat-fab-state-layer-color: var(--button-hover-pale-aqua) !important;
   --mat-fab-hover-state-layer-opacity: 1;
 
   --mdc-extended-fab-disabled-layer-color: var(--white) !important;
@@ -537,8 +542,8 @@ mat-card {
   --mdc-checkbox-unselected-hover-icon-color: var(--checkbox-grey);
   --mdc-checkbox-unselected-pressed-state-layer-color: var(--checkbox-grey);
 
-  --mat-checkbox-disabled-label-color: var(--violet-blue) !important;
-  --mdc-checkbox-disabled-selected-icon-color: var(--violet-blue) !important;
+  --mat-checkbox-disabled-label-color: var(--pale-aqua);
+  --mdc-checkbox-disabled-selected-icon-color: var(--pale-aqua);
 }
 
 .mat-mdc-checkbox .mat-internal-form-field {
@@ -598,6 +603,50 @@ section[_ngcontent-ng-c2708097669] {
   letter-spacing: 0px !important;
 }
 
+.mdc-list-item--with-leading-icon.mdc-list-item {
+  display: flex !important;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__end {
+  padding-left: 490px !important;
+}
+.mat-accent .mdc-list-item__end {
+  --mdc-radio-unselected-icon-color: var(--list-option-radio-grey) !important;
+  --mdc-checkbox-unselected-icon-color: var(--checkbox-grey) !important;
+
+  --mdc-radio-unselected-hover-icon-color: var(
+    --list-option-radio-grey
+  ) !important;
+  --mdc-checkbox-unselected-hover-icon-color: var(--checkbox-grey) !important;
+
+  --mdc-checkbox-selected-focus-icon-color: var(--violet-blue);
+  --mdc-checkbox-selected-hover-icon-color: var(--violet-blue);
+  --mdc-checkbox-selected-icon-color: var(--violet-blue);
+
+  --mdc-radio-selected-focus-icon-color: var(--violet-blue);
+  --mdc-radio-selected-hover-icon-color: var(--violet-blue);
+  --mdc-radio-selected-icon-color: var(--violet-blue);
+  --mdc-radio-selected-pressed-icon-color: var(--violet-blue);
+  --mat-radio-checked-ripple-color: var(--violet-blue);
+}
+
+.mdc-list-item:hover::before {
+  opacity: 0 !important;
+}
+.mdc-list-item:hover::after {
+  opacity: 0 !important;
+}
+.mdc-list-item:focus::before {
+  opacity: 0 !important;
+}
+
+.mdc-list-item:focus::after {
+  opacity: 0 !important;
+}
+
+.mdc-radio:hover::before {
+  color: #2aba7d !important;
+}
 /************************************ DIVIDER ************************************/
 
 .mat-divider {
