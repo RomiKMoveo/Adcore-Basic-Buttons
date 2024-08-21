@@ -28,6 +28,7 @@ body {
   --checkbox-grey: #bcbcbc;
   --list-option-radio-grey: #d1cac6;
   --tooltip-background-color: #222222;
+  --list-hover-color: #edeff1;
   /*typography*/
   --font-family: "Raleway";
   --font-weight-bold: 700;
@@ -196,6 +197,12 @@ body {
 
   /*list*/
   --mat-ripple-color: transparent !important;
+  --mdc-list-list-item-container-color: white;
+  --mdc-list-list-item-leading-icon-color: #114ede !important;
+
+  --mdc-list-list-item-hover-state-layer-color: var(--list-hover-color);
+  --mdc-list-list-item-hover-state-layer-opacity: 0.3;
+  --mdc-list-list-item-focus-state-layer-opacity: 0;
 }
 
 .mat-icon {
@@ -590,6 +597,12 @@ mat-card {
   border-radius: 2px;
 }
 
+p {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--squid-ink);
+}
 /************************************ RADIO ************************************/
 .mat-accent.mat-mdc-radio-button {
   --mdc-radio-selected-focus-icon-color: var(--violet-blue);
@@ -653,23 +666,27 @@ section[_ngcontent-ng-c2708097669] {
   --mat-radio-checked-ripple-color: var(--violet-blue);
 }
 
-/* .mdc-list-item:hover::before {
-  opacity: 0 !important;
+.mdc-list-item:hover {
+  /* opacity: 0 !important; */
+  /* --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
+  --mdc-list-list-item-hover-state-layer-opacity: 1 !important; */
 }
-.mdc-list-item:hover::after {
-  opacity: 0 !important;
-}
+
+/* .mdc-list-item:hover::after {
+  /* opacity: 0 !important; 
+  --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
+  --mdc-list-list-item-hover-state-layer-opacity: 1 !important;
+} */
 .mdc-list-item:focus::before {
-  opacity: 0 !important;
+  /* --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
+  --mdc-list-list-item-hover-state-layer-opacity: 1 !important; */
 }
 
 .mdc-list-item:focus::after {
-  opacity: 0 !important;
+  --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
+  --mdc-list-list-item-hover-state-layer-opacity: 1 !important;
 }
 
-.mdc-radio:hover::before {
-  color: #2aba7d !important;
-} */
 /************************************ DIVIDER ************************************/
 
 .mat-divider {
