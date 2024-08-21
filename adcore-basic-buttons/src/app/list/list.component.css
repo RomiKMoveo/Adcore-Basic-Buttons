@@ -9,6 +9,9 @@ section {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   font-weight: normal;
+  color: #172b4d;
+  margin-bottom: 25px;
+  padding-left: 10px;
 }
 
 .example-divider {

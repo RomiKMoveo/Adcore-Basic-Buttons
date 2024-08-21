@@ -198,7 +198,7 @@ body {
   /*list*/
   --mat-ripple-color: transparent !important;
   --mdc-list-list-item-container-color: white;
-  --mdc-list-list-item-leading-icon-color: #114ede !important;
+  /* --mdc-list-list-item-leading-icon-color: #114ede !important; */
 
   --mdc-list-list-item-hover-state-layer-color: var(--list-hover-color);
   --mdc-list-list-item-hover-state-layer-opacity: 0.3;
@@ -634,7 +634,7 @@ section[_ngcontent-ng-c2708097669] {
   color: var(--squid-ink) !important;
   font-family: var(--font-family) !important;
   line-height: var(--line-height) !important;
-  font-size: var(--font-size) !important;
+  font-size: 16px !important;
   font-weight: var(--font-weight-medium) !important;
   letter-spacing: 0px !important;
 }
@@ -666,25 +666,25 @@ section[_ngcontent-ng-c2708097669] {
   --mat-radio-checked-ripple-color: var(--violet-blue);
 }
 
-.mdc-list-item:hover {
-  /* opacity: 0 !important; */
-  /* --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
-  --mdc-list-list-item-hover-state-layer-opacity: 1 !important; */
+.mdc-list-item__secondary-text {
+  --mdc-list-list-item-supporting-text-color: var(--squid-ink);
+  opacity: 0.75;
+  --mdc-list-list-item-supporting-text-font: var(--font-family);
+  --mdc-list-list-item-supporting-text-line-height: var(--line-height);
+  --mdc-list-list-item-supporting-text-size: 13px;
+  --mdc-list-list-item-supporting-text-weight: var(--font-weight-medium);
+  letter-spacing: 1px !important;
+}
+.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines
+  .mdc-list-item__primary-text {
+  display: flex !important;
 }
 
-/* .mdc-list-item:hover::after {
-  /* opacity: 0 !important; 
-  --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
-  --mdc-list-list-item-hover-state-layer-opacity: 1 !important;
-} */
-.mdc-list-item:focus::before {
-  /* --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
-  --mdc-list-list-item-hover-state-layer-opacity: 1 !important; */
-}
-
-.mdc-list-item:focus::after {
-  --mdc-list-list-item-hover-state-layer-color: #d60bb4 !important;
-  --mdc-list-list-item-hover-state-layer-opacity: 1 !important;
+.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__start {
+  display: flex !important;
+  margin-top: unset !important;
+  width: 31px !important;
+  height: 31px !important;
 }
 
 /************************************ DIVIDER ************************************/

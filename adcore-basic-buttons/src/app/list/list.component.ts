@@ -1,12 +1,11 @@
 import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HttpClientModule } from '@angular/common/http';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+
 export interface Section {
+  icon: string;
   name: string;
   updated: Date;
 }
@@ -17,29 +16,11 @@ export interface Section {
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [
-    MatListModule,
-    MatIconModule,
-    MatDividerModule,
-    DatePipe,
-    HttpClientModule,
-  ],
+  imports: [MatListModule, MatIconModule, MatDividerModule, DatePipe],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })
 export class ListComponent {
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {
-    this.matIconRegistry.addSvgIcon(
-      'unicorn',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/unicorn_icon.svg'
-      )
-    );
-  }
-
   typesOfShoes: string[] = [
     'Boots',
     'Clogs',
@@ -50,16 +31,19 @@ export class ListComponent {
 
   folders: Section[] = [
     {
-      name: 'Photos',
+      icon: '../../assets/OS-icon.svg',
+      name: 'Osher Sitone',
       updated: new Date('1/1/16'),
     },
     {
-      name: 'Recipes',
-      updated: new Date('1/17/16'),
+      icon: '../../assets/AO-icon.svg',
+      name: 'Amit Ohayon',
+      updated: new Date('2/15/25'),
     },
     {
-      name: 'Work',
-      updated: new Date('1/28/16'),
+      icon: '../../assets/OB-icon.svg',
+      name: 'Omri Brill',
+      updated: new Date('2/15/25'),
     },
   ];
 }

@@ -12,11 +12,11 @@
 <section>
   <div class="example-label">List with sections</div>
   <mat-list>
-    <div mat-subheader>Folders</div>
     @for (folder of folders; track folder) {
     <mat-list-item>
-      <mat-icon matListItemIcon>folder</mat-icon>
-      <!-- <mat-icon svgIcon="unicorn"></mat-icon> -->
+      <mat-icon matListItemIcon>
+        <img src="{{ folder.icon }}" />
+      </mat-icon>
       <div matListItemTitle>{{ folder.name }}</div>
       <div matListItemLine>{{ folder.updated | date }}</div>
     </mat-list-item>
