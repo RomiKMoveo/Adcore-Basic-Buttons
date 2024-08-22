@@ -198,11 +198,10 @@ body {
   /*list*/
   --mat-ripple-color: transparent !important;
   --mdc-list-list-item-container-color: white;
-  /* --mdc-list-list-item-leading-icon-color: #114ede !important; */
-
   --mdc-list-list-item-hover-state-layer-color: var(--list-hover-color);
-  --mdc-list-list-item-hover-state-layer-opacity: 0.3;
-  --mdc-list-list-item-focus-state-layer-opacity: 0;
+  --mdc-list-list-item-focus-state-layer-color: var(--list-hover-color);
+  --mdc-list-list-item-hover-state-layer-opacity: 1;
+  --mdc-list-list-item-focus-state-layer-opacity: 1;
 }
 
 .mat-icon {
@@ -693,6 +692,9 @@ section[_ngcontent-ng-c2708097669] {
   height: 31px !important;
 }
 
+.mat-mdc-list-base .mdc-list-item__content {
+  z-index: 1 !important;
+}
 /************************************ DIVIDER ************************************/
 
 .mat-divider {
