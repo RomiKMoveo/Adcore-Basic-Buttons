@@ -94,7 +94,7 @@ body {
 
   --mdc-text-button-container-height: var(--button-height);
   --mdc-text-button-container-shape: var(--button-shape);
-  --mat-text-button-horizontal-padding: var(--button-horizontal-padding);
+  /* --mat-text-button-horizontal-padding: var(--button-horizontal-padding); */
 
   --mat-text-button-state-layer-color: var(--button-hover-pale-aqua);
 
@@ -141,7 +141,7 @@ body {
   /*icon*/
   --mdc-icon-button-icon-color: var(--squid-ink);
   --mdc-icon-button-disabled-icon-color: rgba(50, 80, 162, 0.4);
-
+  --mdc-icon-button-state-layer-size: 34px;
   /*FAB*/
 
   --mdc-fab-container-elevation-shadow: none;
@@ -208,12 +208,18 @@ body {
 .mat-icon {
   font-weight: var(--font-weight-normal);
   font-size: var(--button-icon-font-size);
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   line-height: 22px !important;
   height: 24px !important;
   width: 24px !important;
+  fill: currentColor;
+  overflow: hidden;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .mat-mdc-extended-fab > .mat-icon,
@@ -489,10 +495,10 @@ mat-card {
   font-size: 12px !important;
 }
 
-.mdc-text-field--outlined .mat-mdc-form-field-infix,
+/* .mdc-text-field--outlined .mat-mdc-form-field-infix,
 .mdc-text-field--no-label .mat-mdc-form-field-infix {
   padding-top: 12px !important;
-}
+} */
 
 .mdc-text-field {
   padding: 0 4px;
@@ -506,11 +512,11 @@ mat-card {
   padding-right: 4px !important;
 }
 
-.mat-mdc-icon-button {
+/* .mat-mdc-icon-button {
   padding-top: 12px !important;
   padding-bottom: 0px !important;
   padding-right: 0px !important;
-}
+} */
 
 /************************************ BADGE ************************************/
 
