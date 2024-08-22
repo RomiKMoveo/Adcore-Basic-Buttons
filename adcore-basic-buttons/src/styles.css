@@ -541,26 +541,20 @@ mat-card {
   font-weight: var(--font-weight-normal) !important;
 
   width: auto !important;
-  display: grid !important;
-  text-align: center !important;
-  align-items: center !important;
   height: 14px !important;
-  top: 0px !important;
+  top: 5px !important;
 }
 
 .mat-badge-small .mat-badge-content {
   background-color: var(--jungle-green) !important;
 
-  top: 5px !important;
+  top: 4px !important;
   height: 1px !important;
-  display: grid !important;
-  text-align: center !important;
-  align-items: center !important;
 }
 
-.mat-badge-medium.mat-badge-overlap .mat-badge-content {
+/* .mat-badge-medium.mat-badge-overlap .mat-badge-content {
   top: 1px !important;
-}
+} */
 
 /************************************ CHECKBOX ************************************/
 

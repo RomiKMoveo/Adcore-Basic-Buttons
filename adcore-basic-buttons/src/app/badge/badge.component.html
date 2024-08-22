@@ -13,35 +13,25 @@
 </section>
 
 <section>
-  <div class="demo-section">
-    Button with a badge on the left
-    <button mat-stroked-button matBadge="111" matBadgePosition="before">
-      Basic
-    </button>
-  </div>
+  <div class="example-label">Button with a badge on the left</div>
+  <button mat-stroked-button matBadge="111" matBadgePosition="before">
+    Basic
+  </button>
 </section>
 
 <section>
-  <div class="demo-section">
-    Button toggles badge visibility
-    <button
-      mat-stroked-button
-      matBadge="222"
-      [matBadgeHidden]="hidden"
-      (click)="toggleBadgeVisibility()"
-    >
-      Basic
-    </button>
-  </div>
+  <div class="example-label">Button toggles badge visibility</div>
+  <button
+    mat-stroked-button
+    matBadge="222"
+    [matBadgeHidden]="hidden"
+    (click)="toggleBadgeVisibility()"
+  >
+    Basic
+  </button>
 </section>
 
 <section>
-  <div class="demo-section">
-    Icon with a badge
-    <mat-icon matBadge="211">notifications_none</mat-icon>
-    <!-- Include text description of the icon's meaning for screen-readers -->
-    <span class="cdk-visually-hidden">
-      Example with a home icon with overlaid badge showing the number 15
-    </span>
-  </div>
+  <div class="example-label">Icon with a badge</div>
+  <mat-icon matBadge="211">notifications_none</mat-icon>
 </section>
