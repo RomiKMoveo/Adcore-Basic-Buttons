@@ -29,6 +29,8 @@ body {
   --list-option-radio-grey: #d1cac6;
   --tooltip-background-color: #222222;
   --list-hover-color: #edeff1;
+  --manu-hover-background-color: #f2f2f2;
+
   /*typography*/
   --font-family: "Raleway";
   --font-weight-bold: 700;
@@ -202,6 +204,20 @@ body {
   --mdc-list-list-item-focus-state-layer-color: var(--list-hover-color);
   --mdc-list-list-item-hover-state-layer-opacity: 1;
   --mdc-list-list-item-focus-state-layer-opacity: 1;
+
+  /*menu*/
+  --mat-menu-item-icon-color: var(--squid-ink);
+  --mat-menu-item-hover-state-layer-color: var(--manu-hover-background-color);
+  --mat-menu-item-focus-state-layer-color: var(--manu-hover-background-color);
+  --mat-menu-container-color: var(--white);
+  --mat-menu-item-label-text-font: var(--font-family);
+  --mat-menu-item-label-text-size: var(--font-size);
+  --mat-menu-item-label-text-color: var(--squid-ink);
+  --mat-menu-item-label-text-tracking: 0px;
+  --mat-menu-item-label-text-weight: var(--font-weight-medium);
+  --mat-menu-container-shape: 12px;
+  --mat-menu-item-spacing: 12px;
+  --mat-menu-container-min-width: 260px;
 }
 
 .mat-icon {
@@ -624,9 +640,6 @@ section[_ngcontent-ng-c2708097669] {
 .mat-radio-group {
   padding-bottom: 23px !important;
 }
-/************************************ TOOLTIP ************************************/
-
-/************************************ TOOLBAR ************************************/
 
 /************************************ LIST ************************************/
 .mdc-list-item__primary-text {
@@ -702,3 +715,47 @@ section[_ngcontent-ng-c2708097669] {
   vertical-align: middle !important;
   margin-left: 16px !important;
 }
+
+/************************************ MENU ************************************/
+.mat-mdc-menu-item:not([disabled]):hover {
+  border-radius: 3px !important;
+}
+
+.mat-mdc-menu-content,
+.mat-mdc-menu-content {
+  padding: 21px 13px !important;
+}
+
+.mat-mdc-menu-item {
+  min-height: 40px !important;
+  min-width: 260px !important;
+}
+
+.cdk-overlay-connected-position-bounding-box:not(:first-of-type) {
+  transform: translate(1rem, 0);
+}
+
+/* .mat-mdc-menu-item .mat-mdc-menu-submenu-icon {
+  display: none;
+} */
+
+.mat-mdc-menu-item:has(.material-icons, mat-icon, [matButtonIcon]) {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+
+.mat-mdc-menu-submenu-icon {
+  fill: transparent !important;
+  background-image: url("assets/keyboard_arrow_right.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 8px !important;
+}
+/************************************ SNACKBAR ************************************/
+
+/************************************ DIALOG ************************************/
+
+/************************************ ACCORDION ************************************/
