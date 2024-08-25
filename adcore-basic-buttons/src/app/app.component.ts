@@ -15,6 +15,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListComponent } from './list/list.component';
 import { DividerComponent } from './divider/divider.component';
 import { MenuComponent } from './menu/menu.component';
+import { SelectComponent } from './select/select.component';
 
 /**
  * @title Basic buttons
@@ -39,6 +40,7 @@ import { MenuComponent } from './menu/menu.component';
     ListComponent,
     DividerComponent,
     MenuComponent,
+    SelectComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
