@@ -16,6 +16,9 @@ import { ListComponent } from './list/list.component';
 import { DividerComponent } from './divider/divider.component';
 import { MenuComponent } from './menu/menu.component';
 import { SelectComponent } from './select/select.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+import { ModalComponent } from './modal/modal.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 /**
  * @title Basic buttons
@@ -41,6 +44,9 @@ import { SelectComponent } from './select/select.component';
     DividerComponent,
     MenuComponent,
     SelectComponent,
+    SnackbarComponent,
+    ModalComponent,
+    AccordionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

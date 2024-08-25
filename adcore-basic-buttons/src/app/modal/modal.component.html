@@ -1,1 +1,67 @@
-<p>modal works!</p>
+<section>
+  <div class="example-label">Dialog Animations</div>
+  <button mat-raised-button (click)="openDialog('0ms', '0ms')">
+    Open dialog without animation
+  </button>
+
+  <mat-divider class="example-divider"></mat-divider>
+
+  <button mat-raised-button (click)="openDialog('3000ms', '1500ms')">
+    Open dialog slowly
+  </button>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">
+    Dialog with header, scrollable content and actions
+  </div>
+  <button mat-button (click)="openDialog2()">Open dialog</button>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Injecting data when opening a dialog</div>
+  <button mat-button (click)="openDialog5()">Open dialog</button>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Dialog elements</div>
+  <button mat-button (click)="openDialog3()">Launch dialog</button>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Dialog lunched from a menu</div>
+  <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openDialog4()">Open dialog</button>
+  </mat-menu>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Dialog Overview</div>
+  <ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name" />
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog6()">Pick one</button>
+    </li>
+    @if (animal()) {
+    <li>
+      You chose: <em>{{ animal() }}</em>
+    </li>
+    }
+  </ol>
+</section>
