@@ -13,8 +13,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 })
 export class SnackbarComponent {
   private _snackBar = inject(MatSnackBar);
+  massage = '✅  Proposal shared successfully!';
+  action = 'x';
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
+  openSnackBar() {
+    this._snackBar.open(this.massage, this.action);
   }
 }
