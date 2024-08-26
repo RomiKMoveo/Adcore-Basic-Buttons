@@ -1,21 +1,13 @@
 section {
-  display: flex;
-  flex-direction: column;
+  display: table;
   margin-left: 30px;
 }
 
 .example-label {
+  display: table-header-group;
   font-family: "Raleway", sans-serif;
-  display: flex;
   font-size: 14px;
   margin-left: 8px;
-  min-width: 300px;
-  padding-bottom: 70px;
-}
-
-.example-divider {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .example-divider {
   padding-top: 20px;

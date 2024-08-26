@@ -218,6 +218,22 @@ body {
   --mat-menu-container-shape: 12px;
   --mat-menu-item-spacing: 12px;
   --mat-menu-container-min-width: 260px;
+
+  /*snackbar*/
+  --mdc-snackbar-container-color: var(--white);
+  --mdc-snackbar-container-shape: 12px;
+  --mdc-snackbar-supporting-text-color: var(--squid-ink);
+  --mdc-snackbar-supporting-text-font: var(--font-family);
+  --mdc-snackbar-supporting-text-line-height: 16px;
+  --mdc-snackbar-supporting-text-weight: var(--font-weight-semi-bold);
+  --mdc-snackbar-supporting-text-size: 16px;
+
+  /*modal*/
+  --mat-dialog-actions-padding: 0 28px 24px 28px;
+  --mat-dialog-headline-padding: 25px 28px 18px 28px;
+  --mat-dialog-content-padding: 28px 28px 28px;
+  --mat-dialog-with-actions-content-padding: 44px 28px 24px 28px;
+  --mat-dialog-container-min-width: 383px;
 }
 
 .mat-icon {
@@ -755,7 +771,62 @@ section[_ngcontent-ng-c2708097669] {
   margin-left: 8px !important;
 }
 /************************************ SNACKBAR ************************************/
+.mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
+  min-width: 430px !important;
+  min-height: 63px !important;
+}
+.mat-mdc-snackbar-surface {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
+.mat-mdc-snack-bar-container
+  .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+  color: var(--squid-ink) !important;
+  --mat-text-button-state-layer-color: var(--squid-ink) !important;
+  --mat-text-button-ripple-color: var(--squid-ink) !important;
+  --mat-ripple-color: var(--squid-ink) !important;
+}
 /************************************ DIALOG ************************************/
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  opacity: 0 !important;
+}
 
+.mdc-dialog--open .mat-mdc-dialog-surface,
+.mdc-dialog--closing .mat-mdc-dialog-surface {
+  border-radius: 12px !important;
+  background: var(--white) !important;
+  box-shadow: 0px 0px 20px #00000026 !important;
+  opacity: 1 !important;
+}
+
+.mat-mdc-dialog-container .mat-mdc-dialog-title {
+  --mdc-dialog-subhead-color: var(--squid-ink);
+  --mdc-dialog-subhead-font: var(--font-family);
+  --mdc-dialog-subhead-size: var(--font-size);
+  --mdc-dialog-subhead-weight: var(--font-weight-semi-bold);
+}
+
+.mat-mdc-dialog-container .mat-mdc-dialog-content {
+  color: var(--squid-ink) !important;
+  --mdc-dialog-supporting-text-font: var(--font-family);
+  --mdc-dialog-supporting-text-size: 14px;
+  --mdc-dialog-supporting-text-weight: var(--font-weight-medium);
+}
+
+ul {
+  padding: 17px 28px 17px 28px !important;
+}
+.mat-mdc-dialog-container .mat-mdc-dialog-title + .mat-mdc-dialog-content {
+  max-width: 460px;
+}
+
+.mat-mdc-dialog-content > :first-child {
+  padding-bottom: 23px;
+}
 /************************************ ACCORDION ************************************/

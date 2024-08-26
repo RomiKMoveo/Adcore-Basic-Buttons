@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { DividerComponent } from '../divider/divider.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-modal',
@@ -32,6 +33,7 @@ import { DividerComponent } from '../divider/divider.component';
     FormsModule,
     DividerComponent,
     MatDividerModule,
+    MatIconModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './modal.component.html',

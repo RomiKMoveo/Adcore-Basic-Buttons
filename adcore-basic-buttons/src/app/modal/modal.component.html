@@ -1,12 +1,14 @@
 <section>
   <div class="example-label">Dialog Animations</div>
-  <button mat-raised-button (click)="openDialog('0ms', '0ms')">
+  <button mat-stroked-button (click)="openDialog('0ms', '0ms')">
     Open dialog without animation
   </button>
+</section>
 
-  <mat-divider class="example-divider"></mat-divider>
+<mat-divider class="example-divider"></mat-divider>
 
-  <button mat-raised-button (click)="openDialog('3000ms', '1500ms')">
+<section>
+  <button mat-stroked-button (click)="openDialog('3000ms', '1500ms')">
     Open dialog slowly
   </button>
 </section>
@@ -17,21 +19,21 @@
   <div class="example-label">
     Dialog with header, scrollable content and actions
   </div>
-  <button mat-button (click)="openDialog2()">Open dialog</button>
+  <button mat-stroked-button (click)="openDialog2()">Open dialog</button>
 </section>
 
 <mat-divider class="example-divider"></mat-divider>
 
 <section>
   <div class="example-label">Injecting data when opening a dialog</div>
-  <button mat-button (click)="openDialog5()">Open dialog</button>
+  <button mat-button (click)="openDialog5()">Basic</button>
 </section>
 
 <mat-divider class="example-divider"></mat-divider>
 
 <section>
   <div class="example-label">Dialog elements</div>
-  <button mat-button (click)="openDialog3()">Launch dialog</button>
+  <button mat-button (click)="openDialog3()">Basic</button>
 </section>
 
 <mat-divider class="example-divider"></mat-divider>
@@ -48,20 +50,7 @@
 
 <section>
   <div class="example-label">Dialog Overview</div>
-  <ol>
-    <li>
-      <mat-form-field>
-        <mat-label>What's your name?</mat-label>
-        <input matInput [(ngModel)]="name" />
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog6()">Pick one</button>
-    </li>
-    @if (animal()) {
-    <li>
-      You chose: <em>{{ animal() }}</em>
-    </li>
-    }
-  </ol>
+  <button mat-stroked-button (click)="openDialog6()">Pick one</button>
+  @if (animal()) { You chose: <em>{{ animal() }}</em>
+  }
 </section>
