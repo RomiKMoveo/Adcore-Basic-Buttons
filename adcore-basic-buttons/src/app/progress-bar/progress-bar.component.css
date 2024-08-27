@@ -1,0 +1,17 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.example-label {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  margin-left: 8px;
+  padding-bottom: 20px;
+}
+.example-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

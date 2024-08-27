@@ -1,0 +1,15 @@
+section {
+  display: table;
+  margin-left: 30px;
+}
+
+.example-label {
+  display: table-header-group;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  margin-left: 8px;
+}
+.example-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

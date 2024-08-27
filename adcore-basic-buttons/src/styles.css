@@ -911,3 +911,11 @@ ul {
 .mat-mdc-form-field {
   margin-right: 20px;
 }
+
+/************************************ PROGRESS BAR ************************************/
+.mdc-linear-progress {
+  min-width: 800px !important;
+  --mdc-linear-progress-active-indicator-color: var(--violet-blue) !important;
+}
+
+/************************************ SIDE TOGGLE ************************************/

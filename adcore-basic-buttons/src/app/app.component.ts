@@ -19,6 +19,9 @@ import { SelectComponent } from './select/select.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { ModalComponent } from './modal/modal.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { SideToggleComponent } from './side-toggle/side-toggle.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 /**
  * @title Basic buttons
@@ -47,6 +50,9 @@ import { AccordionComponent } from './accordion/accordion.component';
     SnackbarComponent,
     ModalComponent,
     AccordionComponent,
+    ProgressBarComponent,
+    SideToggleComponent,
+    DatePickerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
