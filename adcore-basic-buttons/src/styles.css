@@ -247,6 +247,16 @@ body {
   --mat-expansion-container-text-font: var(--font-family);
 
   --mdc-filled-text-field-container-color: var(--white);
+
+  /*toolbar*/
+  --mat-toolbar-container-background-color: var(--white);
+  --mat-toolbar-container-text-color: var(--squid-ink);
+  --mat-toolbar-title-text-font: var(--font-family);
+  --mat-toolbar-title-text-line-height: 0px;
+  --mat-toolbar-title-text-size: var(--font-size);
+  --mat-toolbar-title-text-tracking: 0px;
+  --mat-toolbar-title-text-weight: var(--spacing-medium);
+  --mat-toolbar-standard-height: 40px;
 }
 
 .mat-icon {
@@ -589,10 +599,6 @@ mat-card {
   height: 1px !important;
 }
 
-/* .mat-badge-medium.mat-badge-overlap .mat-badge-content {
-  top: 1px !important;
-} */
-
 /************************************ CHECKBOX ************************************/
 
 .mat-accent.mat-mdc-checkbox {
@@ -756,13 +762,8 @@ section[_ngcontent-ng-c2708097669] {
   transform: translate(1rem, 0);
 }
 
-/* .mat-mdc-menu-item .mat-mdc-menu-submenu-icon {
-  display: none;
-} */
-
 .mat-mdc-menu-item:has(.material-icons, mat-icon, [matButtonIcon]) {
   display: flex;
-  /* flex-direction: row-reverse; */
 }
 
 .mat-mdc-menu-submenu-icon {
