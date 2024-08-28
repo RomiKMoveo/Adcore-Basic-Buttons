@@ -97,7 +97,6 @@ body {
 
   --mdc-text-button-container-height: var(--button-height);
   --mdc-text-button-container-shape: var(--button-shape);
-  /* --mat-text-button-horizontal-padding: var(--button-horizontal-padding); */
 
   --mat-text-button-state-layer-color: var(--button-hover-pale-aqua);
 
@@ -744,6 +743,10 @@ section[_ngcontent-ng-c2708097669] {
 }
 
 /************************************ MENU ************************************/
+/*
+* In nested class the original arrows are not displayed. 
+* I have to add a background image in order to match the original design.
+*/
 .mat-mdc-menu-item:not([disabled]):hover {
   border-radius: 3px !important;
 }
@@ -777,6 +780,10 @@ section[_ngcontent-ng-c2708097669] {
   margin-left: 8px !important;
 }
 /************************************ SNACKBAR ************************************/
+/*
+* The original snackbar does not have an icon in it,
+* so I have added an icon to the snackbar window via html.
+*/
 .mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
   min-width: 430px !important;
   min-height: 63px !important;
@@ -804,6 +811,10 @@ section[_ngcontent-ng-c2708097669] {
 }
 
 /************************************ DIALOG ************************************/
+/*
+* The original dialog does not have a close button,
+* so I have added a button to the dialog window via html.
+*/
 .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
   opacity: 0 !important;
 }
@@ -920,7 +931,6 @@ ul {
 
 .mat-mdc-dialog-container .mat-mdc-dialog-title {
   display: flex !important;
-  /* justify-content: space-between !important; */
 }
 /************************************ PROGRESS BAR ************************************/
 .mdc-linear-progress {
