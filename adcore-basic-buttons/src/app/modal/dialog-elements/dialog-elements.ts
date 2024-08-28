@@ -8,6 +8,7 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'dialog-elements',
@@ -19,6 +20,7 @@ import {
     MatDialogActions,
     MatDialogClose,
     MatButtonModule,
+    MatIcon,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

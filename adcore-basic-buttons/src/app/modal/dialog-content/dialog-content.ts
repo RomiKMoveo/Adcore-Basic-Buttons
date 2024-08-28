@@ -8,12 +8,13 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'dialog-content',
   templateUrl: 'dialog-content.html',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
+  imports: [MatDialogModule, MatButtonModule, MatIcon],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogContent {}

@@ -1,8 +1,23 @@
-<h2 mat-dialog-title>Dialog with elements</h2>
-<mat-dialog-content
-  >This dialog showcases the title, close, content and actions
-  elements.</mat-dialog-content
+<h2
+  mat-dialog-title
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  "
 >
-<mat-dialog-actions align="start">
-  <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
+  Dialog with elements
+  <button mat-icon-button style="margin-left: auto">
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+<mat-dialog-content>
+  <mat-dialog-content
+    >This dialog showcases the title, close, content and actions
+    elements.</mat-dialog-content
+  >
+  <mat-dialog-actions align="start">
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</mat-dialog-content>

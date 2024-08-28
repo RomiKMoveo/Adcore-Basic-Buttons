@@ -1,4 +1,18 @@
-<h2 mat-dialog-title>Delete file</h2>
+<h2
+  mat-dialog-title
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  "
+>
+  Delete file
+  <button mat-icon-button style="margin-left: auto">
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+
 <mat-dialog-content> Would you like to delete cat.jpeg? </mat-dialog-content>
 <mat-dialog-actions align="start">
   <button mat-flat-button mat-dialog-close cdkFocusInitial>Delete</button>

@@ -913,6 +913,10 @@ ul {
   margin-right: 20px;
 }
 
+.mat-mdc-dialog-container .mat-mdc-dialog-title {
+  display: flex !important;
+  /* justify-content: space-between !important; */
+}
 /************************************ PROGRESS BAR ************************************/
 .mdc-linear-progress {
   min-width: 800px !important;

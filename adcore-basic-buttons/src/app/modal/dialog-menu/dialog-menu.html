@@ -1,4 +1,17 @@
-<mat-dialog-content> This is a dialog </mat-dialog-content>
+<mat-dialog-content
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  "
+>
+  This is a dialog
+  <button mat-icon-button style="margin-left: auto">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-dialog-content>
+
 <mat-dialog-actions align="start">
   <button mat-button mat-dialog-close>Close</button>
 </mat-dialog-actions>
