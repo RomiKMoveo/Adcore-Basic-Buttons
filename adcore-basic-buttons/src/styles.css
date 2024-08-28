@@ -919,3 +919,55 @@ ul {
 }
 
 /************************************ SIDE TOGGLE ************************************/
+.mdc-switch__icon {
+  display: none;
+}
+
+.mat-mdc-slide-toggle .mat-internal-form-field {
+  --mat-switch-label-text-color: var(--squid-ink);
+  --mat-switch-label-text-font: var(--font-family);
+  --mat-switch-label-text-size: var(--font-size);
+  --mat-switch-label-text-weight: var(--spacing-medium);
+  gap: 10px;
+}
+
+.mat-accent.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: var(--white);
+  --mdc-switch-selected-handle-color: var(--white);
+  --mdc-switch-selected-hover-state-layer-color: var(--white);
+  --mdc-switch-selected-pressed-state-layer-color: var(--white);
+  --mdc-switch-selected-focus-handle-color: var(--white);
+  --mdc-switch-selected-hover-handle-color: var(--white);
+  --mdc-switch-selected-pressed-handle-color: var(--white);
+  --mdc-switch-selected-focus-track-color: var(--violet-blue);
+  --mdc-switch-selected-hover-track-color: var(--violet-blue);
+  --mdc-switch-selected-pressed-track-color: var(--violet-blue);
+  --mdc-switch-selected-track-color: var(--violet-blue);
+  --mat-switch-track-outline-color: transparent !important;
+
+  --mdc-switch-unselected-focus-state-layer-color: var(--white);
+  --mdc-switch-unselected-handle-color: var(--white);
+  --mdc-switch-unselected-hover-state-layer-color: var(--white);
+  --mdc-switch-unselected-pressed-state-layer-color: var(--white);
+  --mdc-switch-unselected-focus-handle-color: var(--white);
+  --mdc-switch-unselected-hover-handle-color: var(--white);
+  --mdc-switch-unselected-pressed-handle-color: var(--white);
+  --mdc-switch-unselected-focus-track-color: var(--checkbox-grey);
+  --mdc-switch-unselected-hover-track-color: var(--checkbox-grey);
+  --mdc-switch-unselected-pressed-track-color: var(--checkbox-grey);
+  --mdc-switch-unselected-track-color: var(--checkbox-grey);
+  --mat-switch-disabled-unselected-track-outline-color: transparent !important;
+  --mdc-switch-disabled-selected-handle-color: var(--white);
+  --mdc-switch-disabled-unselected-handle-color: var(--white);
+  --mdc-switch-disabled-selected-track-color: var(--violet-blue);
+  --mdc-switch-disabled-unselected-track-color: var(--checkbox-grey);
+  --mdc-switch-disabled-track-opacity: 0.6;
+  --mat-switch-disabled-unselected-handle-opacity: 1;
+
+  --mdc-switch-track-height: 27px;
+  --mat-switch-selected-with-icon-handle-horizontal-margin: 0 26px;
+  --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 1px;
+}
+.mdc-switch {
+  height: 28px;
+}
