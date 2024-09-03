@@ -22,6 +22,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { SideToggleComponent } from './side-toggle/side-toggle.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { ChipsComponent } from './chips/chips.component';
 
 /**
  * @title Basic buttons
@@ -53,6 +54,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     ProgressBarComponent,
     SideToggleComponent,
     DatePickerComponent,
+    ChipsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

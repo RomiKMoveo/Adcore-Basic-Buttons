@@ -30,6 +30,7 @@ body {
   --tooltip-background-color: #222222;
   --list-hover-color: #edeff1;
   --manu-hover-background-color: #f2f2f2;
+  --chips-divider-color: #a1a9b7;
   --accordion-hover-background-color: var(--accordion-hover-background-color);
 
   /*typography*/
@@ -45,7 +46,7 @@ body {
   --card-title-font-size: 16px;
 
   /*button size*/
-  --button-shape: 4px;
+  --button-shape: 3px;
   --button-outline-width: 2px;
   --outlined-button-horizontal-padding: 15px;
   --button-horizontal-padding: 17px;
@@ -179,13 +180,13 @@ body {
   --mat-fab-disabled-state-container-color: rgba(50, 80, 162, 0.25);
 
   /*card chip*/
-  --mdc-chip-container-shape-radius: var(--button-shape);
-  --mdc-chip-label-text-color: var(--squid-ink);
-  --mdc-chip-label-text-font: var(--font-family);
-  --mdc-chip-label-text-size: var(--chip-font-size);
-  --mdc-chip-label-text-weight: var(--font-weight-medium);
-  --mdc-chip-outline-width: 1px;
-  --mdc-chip-outline-color: var(--squid-ink);
+  --mdc-chip-container-shape-radius: var(--button-shape) !important;
+  --mdc-chip-label-text-color: var(--squid-ink) !important;
+  --mdc-chip-label-text-font: var(--font-family) !important;
+  --mdc-chip-label-text-size: var(--chip-font-size) !important;
+  --mdc-chip-label-text-weight: var(--font-weight-medium) !important;
+  --mdc-chip-outline-width: 1px !important;
+  --mdc-chip-outline-color: var(--squid-ink) !important;
 
   /*tooltip*/
   --mdc-plain-tooltip-container-color: var(--tooltip-background-color);
@@ -256,6 +257,23 @@ body {
   --mat-toolbar-title-text-tracking: 0px;
   --mat-toolbar-title-text-weight: var(--spacing-medium);
   --mat-toolbar-standard-height: 40px;
+
+  /*chips*/
+  --mdc-chip-outline-width: 1px !important;
+  --mdc-chip-outline-color: var(--squid-ink) !important;
+
+  --mdc-chip-disabled-outline-color: var(--chips-divider-color);
+  --mdc-chip-disabled-label-text-color: var(--chips-divider-color);
+  --mdc-chip-flat-disabled-selected-container-color: var(--chips-divider-color);
+  --mdc-chip-with-icon-disabled-icon-color: var(--chips-divider-color);
+  --mdc-chip-with-trailing-icon-disabled-trailing-icon-color: var(
+    --chips-divider-color
+  );
+  --mdc-chip-with-trailing-icon-disabled-trailing-icon-opacity: 1 !important;
+  --mat-chip-trailing-action-state-layer-color: transparent;
+  --mdc-chip-elevated-selected-container-color: #f1f2f4 !important;
+  --mat-chip-trailing-action-opacity: 1;
+  --mat-chip-trailing-action-focus-opacity: 1;
 }
 
 .mat-icon {
@@ -990,4 +1008,35 @@ ul {
 }
 .mdc-switch {
   height: 28px;
+}
+
+/************************************ CHIPS ************************************/
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+  .mdc-evolution-chip__action--trailing {
+  --mdc-chip-with-trailing-icon-trailing-icon-color: var(
+    --squid-ink
+  ) !important;
+}
+
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+  .mdc-evolution-chip__icon--primary {
+  border-radius: 999px !important;
+  --mdc-chip-with-icon-icon-size: 14px !important;
+}
+
+.mdc-evolution-chip--with-avatar.mdc-evolution-chip--with-primary-graphic
+  .mdc-evolution-chip__graphic {
+  padding-left: 6px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+}
+
+mat-label {
+  font-family: var(--font-family) !important;
+}
+
+/************************************ DATEPICKER ************************************/
+.mat-mdc-dialog-container .mat-mdc-dialog-title {
+  display: flex !important;
 }
