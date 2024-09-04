@@ -35,7 +35,7 @@
 
 <section>
   <div class="example-label">Basic menu</div>
-  <button mat-button [matMenuTriggerFor]="menu">
+  <button mat-raised-button [matMenuTriggerFor]="menu">
     Menu
     <mat-icon>keyboard_arrow_down</mat-icon>
   </button>
@@ -49,7 +49,9 @@
 
 <section>
   <div class="example-label">Nested menu</div>
-  <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+  <button mat-raised-button [matMenuTriggerFor]="animals">
+    Menu <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
   <mat-menu #animals="matMenu">
     <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
     <button mat-menu-item [matMenuTriggerFor]="invertebrates">
