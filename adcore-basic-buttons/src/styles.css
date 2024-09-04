@@ -282,6 +282,8 @@ body {
   --mdc-chip-elevated-selected-container-color: #f1f2f4 !important;
   --mat-chip-trailing-action-opacity: 1;
   --mat-chip-trailing-action-focus-opacity: 1;
+  --mdc-chip-selected-label-text-color: var(--violet-blue);
+  --mdc-chip-with-icon-selected-icon-color: var(--violet-blue);
 }
 
 .mat-icon {
@@ -1056,6 +1058,24 @@ ul {
   padding-right: 4px;
   padding-top: 4px;
   padding-bottom: 7px;
+}
+.mat-mdc-standard-chip.mdc-evolution-chip--selected:not(
+    .mdc-evolution-chip--disabled
+  )
+  .mdc-evolution-chip__text-label {
+  font-weight: var(--font-weight-semi-bold) !important;
+}
+
+.mat-mdc-chip-set-stacked {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 170px;
+  --mdc-chip-elevated-selected-container-color: #ececec !important;
+  --mdc-chip-selected-hover-state-layer-color: #ececec;
+  --mdc-chip-focus-state-layer-opacity: 0.12;
+  --mdc-chip-selected-focus-state-layer-color: #ececec;
+  --mdc-chip-selected-focus-state-layer-opacity: 0.12;
+  --mdc-chip-focus-state-layer-color: #ececec;
 }
 
 mat-label {

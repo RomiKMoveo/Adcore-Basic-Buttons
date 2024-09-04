@@ -41,10 +41,10 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ChipsComponent {
   readonly bestBoys: string[] = [
-    'Samoyed',
-    'Akita Inu',
-    'Alaskan Malamute',
-    'Siberian Husky',
+    'Pricing',
+    'Add-ons',
+    'Payment terms',
+    'Add-ons',
   ];
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   readonly currentFruit = model('');
