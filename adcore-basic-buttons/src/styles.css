@@ -31,7 +31,8 @@ body {
   --list-hover-color: #edeff1;
   --manu-hover-background-color: #f2f2f2;
   --chips-divider-color: #a1a9b7;
-  --accordion-hover-background-color: var(--accordion-hover-background-color);
+  --raised-button-text-color: #222222;
+  --raised-button-hover-background--color: #dfdfdf;
 
   /*typography*/
   --font-family: "Raleway";
@@ -52,6 +53,7 @@ body {
   --button-horizontal-padding: 17px;
   --button-vertical-padding: 20px;
   --button-height: 44px;
+  --raised-button-height: 30px;
   --button-fab-size: 36px;
   --button-mini-fab-size: 26px;
 
@@ -91,53 +93,65 @@ body {
 
   /*basic*/
   --mdc-text-button-label-text-color: var(--violet-blue);
-
   --mdc-text-button-label-text-weight: var(--font-weight-bold);
   --mdc-text-button-label-text-font: var(--font-family);
   --mdc-text-button-label-text-size: var(--font-size);
-
   --mdc-text-button-container-height: var(--button-height);
   --mdc-text-button-container-shape: var(--button-shape);
-
   --mat-text-button-state-layer-color: var(--button-hover-pale-aqua);
-
   --mdc-text-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
+  --mdc-text-button-label-text-tracking: 0px;
+
+  /*raised*/
+  --mdc-protected-button-container-color: var(--white);
+  --mdc-protected-button-label-text-color: var(--raised-button-text-color);
+  --mdc-protected-button-disabled-container-color: var(--white);
+  --mdc-protected-button-label-text-font: var(--font-family);
+  --mdc-protected-button-label-text-size: var(--font-size);
+  --mdc-protected-button-label-text-tracking: 0px;
+  --mdc-protected-button-label-text-weight: var(--font-weight-semi-bold);
+  --mdc-protected-button-container-height: var(--raised-button-height);
+  --mdc-protected-button-container-shape: var(--button-shape);
+  --mdc-protected-button-container-elevation-shadow: none;
+  --mdc-protected-button-focus-container-elevation-shadow: none;
+  --mdc-protected-button-hover-container-elevation-shadow: none;
+  --mdc-protected-button-pressed-container-elevation-shadow: none;
+  --mat-protected-button-state-layer-color: rgba(223, 223, 223, 0.3) !important;
+  --mat-protected-button-ripple-color: rgba(223, 223, 223, 0.3) !important;
+  --mat-protected-button-horizontal-padding: 24px;
+  --mat-protected-button-icon-spacing: 8px;
+  --mat-protected-button-icon-offset: -8px;
 
   /*stroked*/
   --mdc-outlined-button-container-color: var(--white);
   --mdc-outlined-button-label-text-color: var(--violet-blue);
   --mdc-outlined-button-outline-color: var(--violet-blue);
   --mdc-outlined-button-outline-width: var(--button-outline-width);
-
   --mdc-outlined-button-label-text-weight: var(--font-weight-bold);
   --mdc-outlined-button-label-text-font: var(--font-family);
   --mdc-outlined-button-label-text-size: var(--font-size);
-
   --mdc-outlined-button-container-height: var(--button-height);
+  --mdc-outlined-button-label-text-tracking: 0px;
   --mdc-outlined-button-container-shape: var(--button-shape);
   --mat-outlined-button-horizontal-padding: var(
     --outlined-button-horizontal-padding
   );
-
   --mat-outlined-button-state-layer-color: var(--button-hover-pale-aqua);
-
   --mdc-outlined-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
   --mdc-outlined-button-disabled-outline-color: rgba(50, 80, 162, 0.4);
 
   /*flat*/
   --mdc-filled-button-container-color: var(--violet-blue);
   --mdc-filled-button-label-text-color: var(--white);
-
   --mdc-filled-button-label-text-weight: var(--font-weight-bold);
   --mdc-filled-button-label-text-font: var(--font-family);
   --mdc-filled-button-label-text-size: var(--font-size);
-
+  --mdc-filled-button-label-text-tracking: 0px;
   --mdc-filled-button-container-height: var(--button-height);
   --mdc-filled-button-container-shape: var(--button-shape);
   --mat-filled-button-horizontal-padding: var(--button-horizontal-padding);
   --mdc-filled-button-disabled-container-color: rgba(50, 80, 162, 0.25);
   --mdc-filled-button-disabled-label-text-color: rgba(50, 80, 162, 0.4);
-
   --mat-filled-button-state-layer-color: var(--button-hover-dark-blue);
   --mat-filled-button-hover-state-layer-opacity: 1;
 
@@ -145,13 +159,12 @@ body {
   --mdc-icon-button-icon-color: var(--squid-ink);
   --mdc-icon-button-disabled-icon-color: rgba(50, 80, 162, 0.4);
   --mdc-icon-button-state-layer-size: 34px;
-  /*FAB*/
 
+  /*FAB*/
   --mdc-fab-container-elevation-shadow: none;
   --mdc-fab-focus-container-elevation-shadow: none;
   --mdc-fab-hover-container-elevation-shadow: none;
   --mdc-fab-pressed-container-elevation-shadow: none;
-
   --mat-fab-disabled-state-foreground-color: rgba(50, 80, 162, 0.4);
   --mat-fab-disabled-state-container-color: rgba(50, 80, 162, 0.25);
 
@@ -160,22 +173,19 @@ body {
   --mdc-fab-small-focus-container-elevation-shadow: none;
   --mdc-fab-small-hover-container-elevation-shadow: none;
   --mdc-fab-small-pressed-container-elevation-shadow: none;
-
   --mat-fab-small-disabled-state-foreground-color: rgba(50, 80, 162, 0.4);
   --mat-fab-small-disabled-state-container-color: rgba(50, 80, 162, 0.25);
 
   /*extendedFAB*/
   --mdc-extended-fab-label-text-size: var(--font-size);
   --mdc-extended-fab-label-text-font: var(--font-family);
+  --mdc-extended-fab-label-text-tracking: 0px;
   --mdc-extended-fab-label-text-weight: var(--font-weight-bold);
-
   --mdc-extended-fab-container-shape: var(--button-shape);
-
   --mdc-extended-fab-container-elevation-shadow: none;
   --mdc-extended-fab-focus-container-elevation-shadow: none;
   --mdc-extended-fab-hover-container-elevation-shadow: none;
   --mdc-extended-fab-pressed-container-elevation-shadow: none;
-
   --mat-fab-disabled-state-foreground-color: rgba(50, 80, 162, 0.4);
   --mat-fab-disabled-state-container-color: rgba(50, 80, 162, 0.25);
 
@@ -245,7 +255,6 @@ body {
   --mat-expansion-header-text-font: var(--font-family);
   --mat-expansion-header-description-color: var(--squid-ink);
   --mat-expansion-container-text-font: var(--font-family);
-
   --mdc-filled-text-field-container-color: var(--white);
 
   /*toolbar*/
@@ -261,7 +270,6 @@ body {
   /*chips*/
   --mdc-chip-outline-width: 1px !important;
   --mdc-chip-outline-color: var(--squid-ink) !important;
-
   --mdc-chip-disabled-outline-color: var(--chips-divider-color);
   --mdc-chip-disabled-label-text-color: var(--chips-divider-color);
   --mdc-chip-flat-disabled-selected-container-color: var(--chips-divider-color);
@@ -365,6 +373,17 @@ button.mat-mdc-stroked-button:hover {
 
 .mdc-button:hover {
   background-color: var(--mat-outlined-button-state-layer-color) !important;
+}
+
+.mat-mdc-raised-button {
+  flex-direction: row-reverse;
+  padding-left: 12px !important;
+  padding-right: 2px !important;
+}
+
+.mat-mdc-raised-button > .mat-icon {
+  margin-right: unset !important;
+  margin-left: unset !important;
 }
 /************************************ CARDS ************************************/
 mat-card {
@@ -579,8 +598,15 @@ mat-card {
 }
 
 .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input {
-  height: 30px !important;
+  height: auto;
 }
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  textarea.mdc-text-field__input {
+  min-height: 100%;
+  padding-top: 5.75px;
+}
+
 /************************************ BADGE ************************************/
 
 .mat-badge-large .mat-badge-content {
@@ -1037,6 +1063,6 @@ mat-label {
 }
 
 /************************************ DATEPICKER ************************************/
-.mat-mdc-dialog-container .mat-mdc-dialog-title {
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input {
   display: flex !important;
 }
