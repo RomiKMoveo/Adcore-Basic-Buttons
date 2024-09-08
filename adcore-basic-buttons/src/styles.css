@@ -1217,3 +1217,18 @@ mat-drawer-container {
   height: 156px !important;
   outline: 1px solid #707070 !important;
 }
+
+/************************************ GRID-LIST ************************************/
+mat-grid-tile {
+  background: lightblue;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-regular) !important;
+  color: var(--squid-ink) !important;
+}
+
+mat-grid-list {
+  width: 920px !important;
+}
+
+/************************************ CDK-MENU ************************************/

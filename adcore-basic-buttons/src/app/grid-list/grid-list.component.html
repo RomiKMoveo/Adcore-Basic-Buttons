@@ -1,9 +1,21 @@
-<section>
-  <div class="example-label">Dynamic grid-list</div>
-</section>
+<div class="example-label">Dynamic grid-list</div>
+<mat-grid-list cols="4" rowHeight="85px" gutterSize="1.5">
+  @for (tile of tiles; track tile) {
+  <mat-grid-tile
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color"
+    >{{ tile.text }}</mat-grid-tile
+  >
+  }
+</mat-grid-list>
 
 <mat-divider></mat-divider>
 
-<section>
-  <div class="example-label">Basic grid-list</div>
-</section>
+<div class="example-label">Basic grid-list</div>
+<mat-grid-list cols="2" rowHeight="2:2" gutterSize="1.5">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
