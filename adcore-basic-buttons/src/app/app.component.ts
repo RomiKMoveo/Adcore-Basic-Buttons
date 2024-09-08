@@ -26,6 +26,7 @@ import { ChipsComponent } from './chips/chips.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { GridListComponent } from './grid-list/grid-list.component';
+import { CdkMenuComponent } from './cdk-menu/cdk-menu.component';
 
 /**
  * @title Basic buttons
@@ -61,6 +62,7 @@ import { GridListComponent } from './grid-list/grid-list.component';
     TabsComponent,
     SidenavComponent,
     GridListComponent,
+    CdkMenuComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
