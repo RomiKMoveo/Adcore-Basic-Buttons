@@ -25,6 +25,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ChipsComponent } from './chips/chips.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { GridListComponent } from './grid-list/grid-list.component';
 
 /**
  * @title Basic buttons
@@ -59,6 +60,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     ChipsComponent,
     TabsComponent,
     SidenavComponent,
+    GridListComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
