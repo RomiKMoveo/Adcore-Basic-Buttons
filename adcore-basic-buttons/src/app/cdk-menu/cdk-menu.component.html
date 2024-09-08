@@ -1,33 +1,247 @@
 <section>
   <div class="example-label">Context menu.</div>
+  <div [cdkContextMenuTriggerFor]="context_menu">
+    Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not.
+    It's not a story the Jedi would tell you. It's a Sith legend. Darth Plagueis
+    was a Dark Lord of the Sith, so powerful and so wise he could use the Force
+    to influence the midichlorians to create life… He had such a knowledge of
+    the dark side that he could even keep the ones he cared about from dying.
+    The dark side of the Force is a pathway to many abilities some consider to
+    be unnatural. He became so powerful… the only thing he was afraid of was
+    losing his power, which eventually, of course, he did. Unfortunately, he
+    taught his apprentice everything he knew, then his apprentice killed him in
+    his sleep. Ironic. He could save others from death, but not himself.
+  </div>
+
+  <ng-template #context_menu>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Cut</button>
+      <button class="example-menu-item" cdkMenuItem>Copy</button>
+      <button class="example-menu-item" cdkMenuItem>Link</button>
+    </div>
+  </ng-template>
 </section>
 
 <mat-divider></mat-divider>
 
 <section>
   <div class="example-label">Gmail inline menu.</div>
+  <div class="example-menu" cdkMenu>
+    <button class="example-menu-item" cdkMenuItem>Inbox</button>
+    <button class="example-menu-item" cdkMenuItem>Snoozed</button>
+    <button class="example-menu-item" cdkMenuItem>Important</button>
+    <button class="example-menu-item" cdkMenuItem>Sent</button>
+    <button class="example-menu-item" cdkMenuItem>Drafts</button>
+    <button class="example-menu-item" cdkMenuItem>All Mail</button>
+  </div>
 </section>
 
 <mat-divider></mat-divider>
 
 <section>
   <div class="example-label">Google Docs Menu Bar.</div>
+  <div cdkMenuBar>
+    <button
+      class="example-menu-bar-item"
+      cdkMenuItem
+      [cdkMenuTriggerFor]="file"
+    >
+      File
+    </button>
+    <button
+      class="example-menu-bar-item"
+      cdkMenuItem
+      [cdkMenuTriggerFor]="edit"
+    >
+      Edit
+    </button>
+    <button
+      class="example-menu-bar-item"
+      cdkMenuItem
+      [cdkMenuTriggerFor]="format"
+    >
+      Format
+    </button>
+  </div>
+
+  <ng-template #file>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Share</button>
+      <hr />
+      <button
+        class="example-menu-item"
+        cdkMenuItem
+        [cdkMenuTriggerFor]="new_doc"
+      >
+        New <span>&#10148;</span>
+      </button>
+      <button class="example-menu-item" cdkMenuItem>Open</button>
+      <button class="example-menu-item" cdkMenuItem>Make a Copy</button>
+      <hr />
+      <button
+        class="example-menu-item"
+        cdkMenuItem
+        [cdkMenuTriggerFor]="download"
+      >
+        Download <span>&#10148;</span>
+      </button>
+    </div>
+  </ng-template>
+
+  <ng-template #edit>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Undo</button>
+      <button class="example-menu-item" cdkMenuItem>Redo</button>
+      <hr />
+      <button class="example-menu-item" cdkMenuItem>Cut</button>
+      <button class="example-menu-item" cdkMenuItem>Copy</button>
+      <button class="example-menu-item" cdkMenuItem>Paste</button>
+    </div>
+  </ng-template>
+
+  <ng-template #format>
+    <div class="example-menu" cdkMenu>
+      <div class="example-menu-group" cdkMenuGroup>
+        <button
+          cdkMenuItemCheckbox
+          class="example-menu-item"
+          cdkMenuItemChecked
+        >
+          Bold
+        </button>
+        <button cdkMenuItemCheckbox class="example-menu-item">Italic</button>
+      </div>
+      <hr />
+      <div class="example-menu-group" cdkMenuGroup>
+        <button cdkMenuItemRadio class="example-menu-item">Small</button>
+        <button cdkMenuItemRadio class="example-menu-item" cdkMenuItemChecked>
+          Normal
+        </button>
+        <button cdkMenuItemRadio class="example-menu-item">Big</button>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #new_doc>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Document</button>
+      <button class="example-menu-item" cdkMenuItem>From template</button>
+      <hr />
+      <button class="example-menu-item" cdkMenuItem>Spreadsheet</button>
+      <button class="example-menu-item" cdkMenuItem>Presentation</button>
+      <button class="example-menu-item" cdkMenuItem>Form</button>
+    </div>
+  </ng-template>
+
+  <ng-template #download>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Microsoft Word</button>
+      <button class="example-menu-item" cdkMenuItem>PDF</button>
+      <button class="example-menu-item" cdkMenuItem>Plain text</button>
+    </div>
+  </ng-template>
 </section>
 
 <mat-divider></mat-divider>
 
 <section>
   <div class="example-label">Nested context menus.</div>
+  <div cdkOuterContextMenu [cdkContextMenuTriggerFor]="outer">
+    Outer context menu
+    <div cdkInnerContextMenu [cdkContextMenuTriggerFor]="inner">
+      Inner context menu
+    </div>
+  </div>
+
+  <ng-template #outer>
+    <div cdkMenu>
+      <button cdkMenuItem>Save</button>
+      <button cdkMenuItem>Exit</button>
+    </div>
+  </ng-template>
+
+  <ng-template #inner>
+    <div cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Cut</button>
+      <button class="example-menu-item" cdkMenuItem>Copy</button>
+      <button class="example-menu-item" cdkMenuItem>Paste</button>
+    </div>
+  </ng-template>
 </section>
 
 <mat-divider></mat-divider>
 
 <section>
   <div class="example-label">Menu with Standalone Trigger.</div>
+  <button
+    cdkMenuButton
+    [cdkMenuTriggerFor]="menu"
+    class="example-standalone-trigger"
+  >
+    Click me!
+  </button>
+
+  <ng-template #menu>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu-item" cdkMenuItem>Refresh</button>
+      <button class="example-menu-item" cdkMenuItem>Settings</button>
+      <button class="example-menu-item" cdkMenuItem>Help</button>
+      <button class="example-menu-item" cdkMenuItem>Sign out</button>
+    </div>
+  </ng-template>
 </section>
 
 <mat-divider></mat-divider>
 
 <section>
   <div class="example-label">Stateful Menu with Standalone Trigger.</div>
+  <button
+    cdkMenuButton
+    [cdkMenuTriggerFor]="menu"
+    class="example-standalone-item"
+  >
+    Click me!
+  </button>
+
+  <ng-template #menu>
+    <div class="example-menu" cdkMenu>
+      <button
+        cdkMenuItemCheckbox
+        class="example-menu-item"
+        [cdkMenuItemChecked]="bold"
+        (cdkMenuItemTriggered)="bold = !bold"
+      >
+        Bold
+      </button>
+      <button
+        cdkMenuItemCheckbox
+        class="example-menu-item"
+        [cdkMenuItemChecked]="italic"
+        (cdkMenuItemTriggered)="italic = !italic"
+      >
+        Italic
+      </button>
+      <hr />
+      <div cdkMenuGroup>
+        @for (size of sizes; track size) {
+        <button
+          cdkMenuItemRadio
+          class="example-menu-item"
+          [cdkMenuItemChecked]="size === selectedSize"
+          (cdkMenuItemTriggered)="selectedSize = size"
+        >
+          {{ size }}
+        </button>
+        }
+      </div>
+      <hr />
+      <button
+        cdkMenuItem
+        class="example-menu-item"
+        (cdkMenuItemTriggered)="reset()"
+      >
+        Reset
+      </button>
+    </div>
+  </ng-template>
 </section>

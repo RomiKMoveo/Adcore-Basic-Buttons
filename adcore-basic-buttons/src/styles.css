@@ -1232,3 +1232,80 @@ mat-grid-list {
 }
 
 /************************************ CDK-MENU ************************************/
+[cdkMenuItem] {
+  border: none !important;
+  background: none !important;
+  color: var(--squid-ink) !important;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+
+[cdkMenuItem]:hover {
+  background-color: #f1f2f4 !important;
+  border-radius: 3px;
+}
+
+[cdkMenu] {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000014;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+  gap: 21px;
+  padding: 23px 0px 23px 23px;
+  min-width: 174px;
+}
+
+[cdkMenuBar] {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000014;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row !important;
+  gap: 37px;
+  padding: 11px 23px 11px 23px;
+  height: 40px;
+}
+
+[cdkOuterContextMenu] {
+  border: 1px dashed var(--squid-ink);
+  top: 1022px;
+  left: 72px;
+  width: 492px;
+  height: 391px;
+  display: flex;
+  color: var(--squid-ink) !important;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+
+[cdkInnerContextMenu] {
+  border: 1px dashed var(--squid-ink);
+  top: 1160px;
+  left: 221px;
+  width: 194px;
+  height: 116px;
+  display: flex;
+  align-self: center;
+}
+
+[cdkMenuButton] {
+  color: var(--squid-ink) !important;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  border: none !important;
+  background-color: transparent !important;
+  top: 2052px;
+  left: 68px;
+  width: 93px;
+  height: 34px;
+}
+
+[cdkMenuButton]:hover {
+  background-color: #f1f2f4 !important;
+  border-radius: 3px !important;
+}
