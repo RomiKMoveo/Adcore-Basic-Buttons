@@ -23,6 +23,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { SideToggleComponent } from './side-toggle/side-toggle.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ChipsComponent } from './chips/chips.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 /**
  * @title Basic buttons
@@ -55,6 +56,7 @@ import { ChipsComponent } from './chips/chips.component';
     SideToggleComponent,
     DatePickerComponent,
     ChipsComponent,
+    TabsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
