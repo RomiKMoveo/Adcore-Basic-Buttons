@@ -24,6 +24,7 @@ import { SideToggleComponent } from './side-toggle/side-toggle.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ChipsComponent } from './chips/chips.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 /**
  * @title Basic buttons
@@ -57,6 +58,7 @@ import { TabsComponent } from './tabs/tabs.component';
     DatePickerComponent,
     ChipsComponent,
     TabsComponent,
+    SidenavComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

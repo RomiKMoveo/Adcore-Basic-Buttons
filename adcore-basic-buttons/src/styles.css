@@ -341,6 +341,11 @@ body {
   --mat-tab-header-inactive-hover-label-text-color: var(--squid-ink);
   --mat-tab-header-inactive-focus-label-text-color: var(--squid-ink);
   --mdc-tab-indicator-active-indicator-color: transparent !important;
+
+  /*sidenav*/
+  --mat-sidenav-container-background-color: #faf9fd;
+  --mat-sidenav-container-text-color: var(--squid-ink);
+  --mat-sidenav-container-shape: 0px !important;
 }
 
 .mat-icon {
@@ -1192,4 +1197,23 @@ mat-label {
 .mat-mdc-tab-label-container {
   border-bottom-width: thin !important;
   max-width: min-content !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 5px;
+}
+
+/************************************ SIDENAV ************************************/
+mat-drawer-container {
+  color: var(--squid-ink) !important;
+  background-color: #eeeeee !important;
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  width: 1172px !important;
+  height: 156px !important;
+  outline: 1px solid #707070 !important;
 }
