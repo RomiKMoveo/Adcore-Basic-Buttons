@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-paginator',
   standalone: true,
-  imports: [],
+  imports: [MatDividerModule],
   templateUrl: './paginator.component.html',
-  styleUrl: './paginator.component.css'
+  styleUrl: './paginator.component.css',
 })
-export class PaginatorComponent {
-
-}
+export class PaginatorComponent {}

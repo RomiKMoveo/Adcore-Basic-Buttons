@@ -27,6 +27,8 @@ import { TabsComponent } from './tabs/tabs.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { CdkMenuComponent } from './cdk-menu/cdk-menu.component';
+import { TableComponent } from './table/table.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 /**
  * @title Basic buttons
@@ -63,6 +65,8 @@ import { CdkMenuComponent } from './cdk-menu/cdk-menu.component';
     SidenavComponent,
     GridListComponent,
     CdkMenuComponent,
+    TableComponent,
+    PaginatorComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

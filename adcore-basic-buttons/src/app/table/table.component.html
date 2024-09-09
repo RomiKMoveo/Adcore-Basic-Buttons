@@ -1,1 +1,287 @@
-<p>table works!</p>
+<section>
+  <div class="example-label">Basic use of table mat-table</div>
+  <table mat-table [dataSource]="dataSource3" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns3"></tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">
+    Styling columns using their auto-generated column names
+  </div>
+  <table
+    mat-table
+    [dataSource]="dataSource2"
+    class="mat-elevation-z8 demo-table"
+  >
+    <!-- Position Column -->
+    <ng-container matColumnDef="demo-position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="demo-name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="demo-weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="demo-symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns2"></tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">
+    Adding and removing data when using an array-based datasource.
+  </div>
+  <div class="table-button-container">
+    <button mat-stroked-button (click)="addData()" class="demo-button">
+      Add data
+    </button>
+    <button
+      mat-stroked-button
+      [disabled]="!dataSource3.length"
+      (click)="removeData()"
+      class="demo-button"
+    >
+      Remove data
+    </button>
+  </div>
+
+  <table
+    mat-table
+    [dataSource]="dataSource3"
+    class="mat-elevation-z8 demo-table"
+  >
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns3"></tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">
+    Table dynamically changing the columns displayed
+  </div>
+  <div class="table-button-container">
+    <button mat-stroked-button (click)="addColumn()">Add column</button>
+    <button mat-stroked-button (click)="removeColumn()">Remove column</button>
+    <button mat-stroked-button (click)="shuffle()">Shuffle</button>
+  </div>
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    @for (column of displayedColumns; track column) {
+    <ng-container [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+    </ng-container>
+    }
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay5"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay5"></tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Table with expandable rows</div>
+  <table
+    mat-table
+    [dataSource]="dataSource4"
+    multiTemplateDataRows
+    class="mat-elevation-z8"
+  >
+    @for (column of columnsToDisplay4; track column) {
+    <ng-container matColumnDef="{{ column }}">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+    </ng-container>
+    }
+    <ng-container matColumnDef="expand">
+      <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-icon-button
+          aria-label="expand row"
+          (click)="
+            expandedElement = expandedElement === element ? null : element;
+            $event.stopPropagation()
+          "
+        >
+          @if (expandedElement === element) {
+          <mat-icon>keyboard_arrow_up</mat-icon>
+          } @else {
+          <mat-icon>keyboard_arrow_down</mat-icon>
+          }
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+    <ng-container matColumnDef="expandedDetail">
+      <td
+        mat-cell
+        *matCellDef="let element"
+        [attr.colspan]="columnsToDisplayWithExpand.length"
+      >
+        <div
+          class="example-element-detail"
+          [@detailExpand]="
+            element == expandedElement ? 'expanded' : 'collapsed'
+          "
+        >
+          <div class="example-element-diagram">
+            <div class="example-element-position">{{ element.position }}</div>
+            <div class="example-element-symbol">{{ element.symbol }}</div>
+            <div class="example-element-name">{{ element.name }}</div>
+            <div class="example-element-weight">{{ element.weight }}</div>
+          </div>
+          <div class="example-element-description">
+            {{ element.description }}
+            <span class="example-element-description-attribution">
+              -- Wikipedia
+            </span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+    <tr
+      mat-row
+      *matRowDef="let element; columns: columnsToDisplayWithExpand"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: ['expandedDetail']"
+      class="example-detail-row"
+      dropdown
+    ></tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>
+
+<section>
+  <div class="example-label">Table with filtering</div>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Ex. ium"
+      #input
+    />
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource6" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns6"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns6"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">
+        No data matching the filter "{{ input.value }}"
+      </td>
+    </tr>
+  </table>
+</section>
+
+<mat-divider class="example-divider"></mat-divider>

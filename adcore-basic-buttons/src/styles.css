@@ -346,6 +346,9 @@ body {
   --mat-sidenav-container-background-color: #faf9fd;
   --mat-sidenav-container-text-color: var(--squid-ink);
   --mat-sidenav-container-shape: 0px !important;
+
+  /*table*/
+  --mat-app-elevation-shadow-level-8: none !important;
 }
 
 .mat-icon {
@@ -1309,3 +1312,71 @@ mat-grid-list {
   background-color: #f1f2f4 !important;
   border-radius: 3px !important;
 }
+
+/************************************ TABLE ************************************/
+.mat-mdc-header-row {
+  --mat-table-header-headline-color: var(--squid-ink);
+  --mat-table-header-headline-font: var(--font-family);
+  --mat-table-header-headline-line-height: 16px;
+  --mat-table-header-headline-size: var(--font-size);
+  --mat-table-header-headline-weight: var(--font-weight-bold);
+  --mat-table-header-headline-tracking: 0px;
+}
+
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table .mat-mdc-header-cell {
+  background: var(--white) !important;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--light-grey) !important;
+}
+
+.mat-mdc-cell {
+  --mat-table-row-item-label-text-tracking: 0px;
+  line-height: 16px !important;
+  padding-right: 147px !important;
+}
+
+.mat-mdc-cell:last-child {
+  padding-right: 22px !important;
+}
+
+.mat-mdc-row:last-child {
+  border-bottom: transparent !important;
+}
+.mat-mdc-table {
+  outline: thin solid var(--light-grey) !important;
+  border-radius: 3px !important;
+}
+
+.mdc-data-table__content {
+  --mat-table-row-item-label-text-font: var(--font-family);
+  --mat-table-row-item-label-text-size: var(--font-size);
+  --mat-table-row-item-label-text-weight: var(--font-weight-medium);
+  --mat-table-row-item-label-text-color: var(--squid-ink);
+}
+
+.table-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 0px 20px 0px;
+}
+
+tr:has(+ tr[dropdown]) td {
+  border-bottom: none !important;
+}
+
+tr[dropdown] {
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/************************************ PAGINATOR ************************************/
