@@ -1433,3 +1433,106 @@ tr[dropdown] {
 .cdk-overlay-pane {
   left: 183.094px !important;
 }
+
+/************************************ TYPOGRAPHY ************************************/
+
+body {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  color: var(--squid-ink);
+}
+
+.mat-display-large {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+}
+
+.mat-display-medium {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+}
+.mat-display-small {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+}
+.mat-headline-large {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-semi-bold) !important;
+  font-size: 16px !important;
+}
+.mat-headline-medium {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 14px !important;
+}
+.mat-headline-small {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 14px !important;
+}
+.mat-title-large {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 14px !important;
+}
+
+.mat-title-medium {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 14px !important;
+}
+
+.mat-title-small {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 14px !important;
+}
+
+.mat-body-large {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 14px !important;
+}
+.mat-body-medium {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 14px !important;
+}
+.mat-body-small {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 13px !important;
+}
+.mat-label-large {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 13px !important;
+}
+.mat-label-medium {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 13px !important;
+}
+.mat-label-small {
+  font-family: var(--font-family);
+  letter-spacing: 0px;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: 12px !important;
+}

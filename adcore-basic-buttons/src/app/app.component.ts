@@ -29,6 +29,7 @@ import { GridListComponent } from './grid-list/grid-list.component';
 import { CdkMenuComponent } from './cdk-menu/cdk-menu.component';
 import { TableComponent } from './table/table.component';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { TypographyComponent } from './typography/typography.component';
 
 /**
  * @title Basic buttons
@@ -67,6 +68,7 @@ import { PaginatorComponent } from './paginator/paginator.component';
     CdkMenuComponent,
     TableComponent,
     PaginatorComponent,
+    TypographyComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
