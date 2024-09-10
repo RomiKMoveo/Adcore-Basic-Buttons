@@ -1242,6 +1242,8 @@ mat-grid-list {
   font-family: var(--font-family) !important;
   font-size: var(--font-size) !important;
   font-weight: var(--font-weight-medium) !important;
+  padding: 9px 13px 9px 13px;
+  display: flex;
 }
 
 [cdkMenuItem]:hover {
@@ -1255,10 +1257,13 @@ mat-grid-list {
   border-radius: 12px;
   display: flex;
   flex-direction: column !important;
-  align-items: flex-start;
-  gap: 21px;
-  padding: 23px 0px 23px 23px;
+  /* align-items: flex-start; */
+  /* gap: 21px; */
+  /* padding: 23px 0px 23px 23px; */
   min-width: 174px;
+  padding: 13px 11px 13px 11px !important;
+  margin: 0 !important;
+  /* width: min-content !important; */
 }
 
 [cdkMenuBar] {
@@ -1267,8 +1272,9 @@ mat-grid-list {
   border-radius: 12px;
   display: flex;
   flex-direction: row !important;
-  gap: 37px;
-  padding: 11px 23px 11px 23px;
+  align-items: center;
+  gap: 13px;
+  padding: 4px 13px 4px 13px;
   height: 40px;
 }
 
