@@ -349,6 +349,12 @@ body {
 
   /*table*/
   --mat-app-elevation-shadow-level-8: none !important;
+
+  /*select*/
+  --mat-select-container-elevation-shadow: none !important;
+  --mdc-filled-text-field-container-color: var(--white) !important;
+  --mat-form-field-hover-state-layer-opacity: var(--white) !important;
+  --mat-form-field-state-layer-color: var(--white) !important;
 }
 
 .mat-icon {
@@ -624,6 +630,7 @@ mat-card {
 .mat-mdc-form-field-infix {
   flex: 1 !important;
   display: flex !important;
+  width: unset !important;
 }
 
 .mat-mdc-form-field-error-wrapper,
@@ -1430,9 +1437,6 @@ tr[dropdown] {
   border-radius: 3px !important;
   box-shadow: none !important;
 }
-.cdk-overlay-pane {
-  left: 183.094px !important;
-}
 
 /************************************ TYPOGRAPHY ************************************/
 
@@ -1535,4 +1539,83 @@ body {
   letter-spacing: 0px;
   font-weight: var(--font-weight-medium) !important;
   font-size: 12px !important;
+}
+
+/************************************ SELECT ************************************/
+.mat-input,
+.mat-select {
+  max-height: 40px !important;
+}
+
+.mat-mdc-select-panel {
+  outline: solid !important;
+  outline-width: 1px !important;
+  outline-color: var(--light-grey) !important;
+  background-color: var(--white) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--mat-select-container-elevation-shadow) !important;
+  overflow: hidden !important;
+}
+
+.mat-mdc-option-active {
+  background-color: var(--white) !important;
+}
+
+.mat-mdc-option:hover {
+  background-color: var(--hover-grey) !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.mat-mdc-option {
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  font-family: var(--font-family) !important;
+  color: var(--squid-ink) !important;
+}
+
+.mat-mdc-select-arrow svg,
+.mat-mdc-select-value,
+.mat-mdc-select-value-text {
+  display: flex !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight-medium) !important;
+  font-family: var(--font-family) !important;
+  color: var(--squid-ink) !important;
+  max-width: 210px !important;
+}
+
+.mat-mdc-select-arrow svg {
+  opacity: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mat-mdc-form-field-text-suffix .mdc-text-field__input {
+  text-align: right !important;
+}
+
+.mdc-text-field--filled.mdc-text-field--disabled {
+  --mdc-filled-text-field-disabled-container-color: var(--white);
+  outline: 1px solid var(--light-grey) !important;
+  border-radius: 3px !important;
+}
+
+.mdc-text-field--outlined .mat-mdc-form-field-infix,
+.mdc-text-field--no-label .mat-mdc-form-field-infix {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.mat-mdc-form-field-icon-prefix > .mat-icon,
+.mat-mdc-form-field-icon-suffix > .mat-icon {
+  padding: 5px 0 0 0;
+}
+
+.mat-mdc-select-value {
+  padding: 5px;
+  overflow: hidden;
 }
