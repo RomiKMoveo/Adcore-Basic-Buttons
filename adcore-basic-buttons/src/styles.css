@@ -212,7 +212,7 @@ body {
   --mat-ripple-color: transparent !important;
   --mdc-list-list-item-container-color: white;
   --mdc-list-list-item-hover-state-layer-color: var(--list-hover-color);
-  --mdc-list-list-item-focus-state-layer-color: var(--list-hover-color);
+  --mdc-list-list-item-focus-state-layer-color: transparent !important;
   --mdc-list-list-item-hover-state-layer-opacity: 1;
   --mdc-list-list-item-focus-state-layer-opacity: 1;
 
