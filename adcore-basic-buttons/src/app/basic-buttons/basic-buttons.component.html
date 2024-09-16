@@ -10,17 +10,21 @@
 <section>
   <div class="example-label">Raised(menu)</div>
   <div class="example-button-row">
-    <button mat-raised-button>
+    <button mat-raised-button (click)="toggleMenu()">
       Basic
-      <mat-icon>keyboard_arrow_up</mat-icon>
+      <mat-icon [ngClass]="{ flipped: isMenuOpen }">keyboard_arrow_up</mat-icon>
     </button>
     <button mat-raised-button disabled>
       Disabled
       <mat-icon>keyboard_arrow_up</mat-icon>
     </button>
-    <a mat-raised-button href="https://www.google.com/" target="_blank"
+    <a
+      mat-raised-button
+      (click)="toggleMenu()"
+      href="https://www.google.com/"
+      target="_blank"
       >Link
-      <mat-icon>keyboard_arrow_up</mat-icon>
+      <mat-icon [ngClass]="{ flipped: isMenuOpen }">keyboard_arrow_up</mat-icon>
     </a>
   </div>
 </section>

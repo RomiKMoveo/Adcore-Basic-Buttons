@@ -1,7 +1,7 @@
 <section>
   <div class="example-label">Chips Autocomplete</div>
   <form>
-    <mat-label>Favorite Fruits</mat-label>
+    <mat-label style="font-size: 12px">Favorite Fruits</mat-label>
     <mat-chip-grid #chipGrid aria-label="Fruit selection">
       @for (fruit of fruits(); track $index) {
       <mat-chip-row (removed)="remove(fruit)">
@@ -69,7 +69,9 @@
 
 <section>
   <div class="example-label">Chips with form control - Disabled</div>
-  <mat-label>Video keywords</mat-label>
+  <mat-label style="color: #172b4d70; font-size: 12px"
+    >Video keywords
+  </mat-label>
   <mat-chip-grid
     #reactiveChipGrid
     aria-label="Enter reactive form keywords"

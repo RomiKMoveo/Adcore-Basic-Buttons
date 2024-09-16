@@ -48,7 +48,7 @@ body {
 
   /*button size*/
   --button-shape: 3px;
-  --button-outline-width: 2px;
+  --button-outline-width: 1px;
   --outlined-button-horizontal-padding: 15px;
   --button-horizontal-padding: 17px;
   --button-vertical-padding: 20px;
@@ -325,7 +325,7 @@ body {
   --mat-datepicker-calendar-date-outline-color: transparent;
 
   /*tabs*/
-  --mat-tab-header-divider-color: var(--violet-blue) !important;
+  --mat-tab-header-divider-color: var(--light-grey) !important;
   --mdc-secondary-navigation-tab-container-height: 28px !important;
   --mat-tab-header-inactive-label-text-color: var(--squid-ink) !important;
   --mat-tab-header-label-text-font: var(--font-family) !important;
@@ -384,7 +384,7 @@ body {
 
   --mdc-fab-container-shape: var(--button-shape);
 
-  --mdc-fab-container-color: var(--lavender-mist);
+  --mdc-fab-container-color: #d5e1ff !important;
   --mat-fab-foreground-color: var(--squid-ink);
 }
 
@@ -395,7 +395,7 @@ body {
 
   padding: 2px 0;
 
-  --mdc-fab-small-container-color: var(--lavender-mist);
+  --mdc-fab-small-container-color: #d5e1ff !important;
   --mat-fab-small-foreground-color: var(--squid-ink);
 }
 
@@ -420,7 +420,7 @@ body {
   padding-top: var(--button-vertical-padding) !important;
   padding-bottom: var(--button-vertical-padding) !important;
 
-  border: var(--violet-blue) 2px solid !important;
+  border: var(--violet-blue) 1px solid !important;
   line-height: var(--line-height) !important;
   color: var(--violet-blue) !important;
 }
@@ -457,6 +457,15 @@ button.mat-mdc-stroked-button:hover {
 .mat-mdc-raised-button > .mat-icon {
   margin-right: unset !important;
   margin-left: unset !important;
+}
+
+.flipped {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+mat-icon {
+  transition: transform 0.3s ease;
 }
 
 /************************************ CARDS ************************************/
@@ -506,7 +515,7 @@ mat-card {
   padding-left: var(--card-button-horizontal-padding) !important;
   padding-right: var(--card-button-right-padding) !important;
   padding-top: var(--card-button-vertical-padding) !important;
-  padding-bottom: var(--card-button-vertical-padding) !important;
+  padding-bottom: 19px !important;
 }
 
 .mat-mdc-card-actions button {
@@ -753,7 +762,7 @@ mat-card {
 .mdc-checkbox__background {
   width: var(--cheeckbox-width);
   height: var(--cheeckbox-height);
-  border: 1px solid currentColor;
+  border: 1px solid #bcbcbc !important;
   border-radius: 2px;
 }
 
@@ -762,7 +771,26 @@ p {
   font-size: var(--font-size);
   font-weight: var(--font-weight-medium);
   color: var(--squid-ink);
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
 }
+
+.mat-mdc-radio-button.mat-mdc-radio-checked .mat-ripple-element,
+.mat-mdc-radio-button.mat-mdc-radio-checked .mdc-radio__background::before {
+  background-color: transparent !important;
+}
+
+.mdc-checkbox
+  .mdc-checkbox__native-control:focus:checked
+  ~ .mdc-checkbox__ripple {
+  opacity: 0 !important;
+}
+
+.mdc-checkbox .mdc-checkbox__native-control:focus ~ .mdc-checkbox__ripple {
+  /* opacity: 0 !important; */
+  background-color: transparent !important;
+}
+
 /************************************ RADIO ************************************/
 .mat-accent.mat-mdc-radio-button {
   --mdc-radio-selected-focus-icon-color: var(--violet-blue);
@@ -967,9 +995,21 @@ ul {
   max-width: 460px;
 }
 
-.mat-mdc-dialog-content > :first-child {
+/* .mat-mdc-dialog-content > :first-child {
   padding-bottom: 23px;
+} */
+
+.mat-dialog-content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
+
+h3 {
+  padding-top: 16px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 5px !important;
+}
+
 /************************************ ACCORDION ************************************/
 .mat-expansion-panel-header-title {
   font-weight: var(--font-weight-bold) !important;
@@ -1051,6 +1091,11 @@ ul {
 .mat-mdc-dialog-container .mat-mdc-dialog-title {
   display: flex !important;
 }
+
+/* .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: unset !important;
+} */
+
 /************************************ PROGRESS BAR ************************************/
 .mdc-linear-progress {
   min-width: 800px !important;
@@ -1105,7 +1150,7 @@ ul {
 
   --mdc-switch-track-height: 27px;
   --mat-switch-selected-with-icon-handle-horizontal-margin: 0 26px;
-  --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 1px;
+  --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 2px;
 }
 .mdc-switch {
   height: 28px;
@@ -1143,7 +1188,7 @@ ul {
   display: flex !important;
   flex-direction: column !important;
   width: 170px;
-  --mdc-chip-elevated-selected-container-color: #ececec !important;
+  --mdc-chip-elevated-selected-container-color: #dddfe2 !important;
   --mdc-chip-selected-hover-state-layer-color: #ececec;
   --mdc-chip-focus-state-layer-opacity: 0.12;
   --mdc-chip-selected-focus-state-layer-color: #ececec;
@@ -1187,12 +1232,26 @@ mat-label {
   padding: 10px 0 17px 17px !important;
 }
 
+.mat-mdc-icon-button img,
+.mat-mdc-icon-button svg {
+  color: transparent !important;
+  background-image: url("assets/calendar-clock\ \(1\).svg") !important;
+  fill: transparent !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 15px 15px !important;
+  width: 15px !important;
+  height: 15px !important;
+  margin-left: auto !important;
+}
 /************************************ TABS ************************************/
 .mdc-tab {
   border: 1px solid var(--light-grey) !important;
+
   border-radius: 3px !important;
   top: 1.5px !important;
   margin-right: 9px !important;
+  background-color: #f2f2f2 !important;
 }
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
@@ -1200,8 +1259,8 @@ mat-label {
 }
 
 .mdc-tab--active {
-  border: 1px solid var(--violet-blue) !important;
-  background-color: #dddfe2 !important;
+  z-index: 1 !important;
+  background-color: var(--white) !important;
 }
 
 .mat-mdc-tab-label-container {
@@ -1215,7 +1274,23 @@ mat-label {
   align-items: center !important;
   gap: 5px;
 }
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs
+  > .mat-mdc-tab-header
+  .mat-mdc-tab {
+  flex-grow: unset !important;
+}
 
+.mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 5px;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+mat-tab-header {
+  max-width: 460px !important;
+}
 /************************************ SIDENAV ************************************/
 mat-drawer-container {
   color: var(--squid-ink) !important;
@@ -1326,6 +1401,22 @@ mat-grid-list {
   border-radius: 3px !important;
 }
 
+.cdk-menu-trigger span {
+  display: none;
+}
+.cdk-menu-trigger::after {
+  content: "" !important;
+  display: inline-block !important;
+
+  fill: transparent !important;
+  background-image: url("assets/keyboard_arrow_right.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: auto !important;
+}
 /************************************ TABLE ************************************/
 .mat-mdc-header-row {
   --mat-table-header-headline-color: var(--squid-ink);
@@ -1392,6 +1483,9 @@ tr[dropdown] {
   overflow: hidden !important;
 }
 
+.mat-mdc-cell {
+  line-height: 22px !important;
+}
 /************************************ PAGINATOR ************************************/
 .mat-mdc-paginator-container {
   background-color: var(--white) !important;
@@ -1581,11 +1675,17 @@ body {
   font-weight: var(--font-weight-medium) !important;
   font-family: var(--font-family) !important;
   color: var(--squid-ink) !important;
-  max-width: 210px !important;
+  max-width: 180px !important;
 }
 
 .mat-mdc-select-arrow svg {
   opacity: 0;
+  /* background-image: url("assets/keyboard_arrow_right.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  margin-left: 50px !important;
+  color: transparent !important; */
 }
 
 input[type="number"]::-webkit-outer-spin-button,
