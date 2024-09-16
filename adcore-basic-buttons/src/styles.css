@@ -1010,6 +1010,12 @@ h3 {
   margin-bottom: 5px !important;
 }
 
+.mat-mdc-unelevated-button:not(:disabled) {
+  background-color: var(--violet-blue) !important;
+}
+.mat-mdc-dialog-actions {
+  padding-top: 25px !important;
+}
 /************************************ ACCORDION ************************************/
 .mat-expansion-panel-header-title {
   font-weight: var(--font-weight-bold) !important;
@@ -1150,7 +1156,7 @@ h3 {
 
   --mdc-switch-track-height: 27px;
   --mat-switch-selected-with-icon-handle-horizontal-margin: 0 26px;
-  --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 2px;
+  --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 1px;
 }
 .mdc-switch {
   height: 28px;
@@ -1232,8 +1238,8 @@ mat-label {
   padding: 10px 0 17px 17px !important;
 }
 
-.mat-mdc-icon-button img,
-.mat-mdc-icon-button svg {
+/* .mat-datepicker-toggle (.mat-mdc-icon-button img,
+.mat-mdc-icon-button svg) {
   color: transparent !important;
   background-image: url("assets/calendar-clock\ \(1\).svg") !important;
   fill: transparent !important;
@@ -1243,7 +1249,8 @@ mat-label {
   width: 15px !important;
   height: 15px !important;
   margin-left: auto !important;
-}
+} */
+
 /************************************ TABS ************************************/
 .mdc-tab {
   border: 1px solid var(--light-grey) !important;
@@ -1256,6 +1263,7 @@ mat-label {
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   font-weight: var(--font-weight-semi-bold);
+  height: 35px !important;
 }
 
 .mdc-tab--active {
@@ -1718,4 +1726,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .mat-mdc-select-value {
   padding: 5px;
   overflow: hidden;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  textarea.mdc-text-field__input {
+  min-height: 78px !important;
+}
+
+.mat-mdc-form-field-icon-prefix > .mat-icon,
+.mat-mdc-form-field-icon-suffix > .mat-icon {
+  padding: 0 4px !important;
 }
