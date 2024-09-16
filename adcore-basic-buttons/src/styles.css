@@ -1263,7 +1263,7 @@ mat-label {
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   font-weight: var(--font-weight-semi-bold);
-  height: 35px !important;
+  /
 }
 
 .mdc-tab--active {
@@ -1298,6 +1298,13 @@ mat-label {
 
 mat-tab-header {
   max-width: 460px !important;
+}
+.mat-mdc-tab-header.mat-mdc-tab-nav-bar-stretch-tabs .mat-mdc-tab-link {
+  height: 35px !important;
+}
+
+.mat-mdc-tab {
+  height: 35px !important;
 }
 /************************************ SIDENAV ************************************/
 mat-drawer-container {
