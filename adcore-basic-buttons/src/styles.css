@@ -787,7 +787,6 @@ p {
 }
 
 .mdc-checkbox .mdc-checkbox__native-control:focus ~ .mdc-checkbox__ripple {
-  /* opacity: 0 !important; */
   background-color: transparent !important;
 }
 
@@ -995,10 +994,6 @@ ul {
   max-width: 460px;
 }
 
-/* .mat-mdc-dialog-content > :first-child {
-  padding-bottom: 23px;
-} */
-
 .mat-dialog-content {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -1097,10 +1092,6 @@ h3 {
 .mat-mdc-dialog-container .mat-mdc-dialog-title {
   display: flex !important;
 }
-
-/* .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
-  top: unset !important;
-} */
 
 /************************************ PROGRESS BAR ************************************/
 .mdc-linear-progress {
@@ -1238,18 +1229,19 @@ mat-label {
   padding: 10px 0 17px 17px !important;
 }
 
-/* .mat-datepicker-toggle (.mat-mdc-icon-button img,
-.mat-mdc-icon-button svg) {
+.mat-datepicker-toggle:has(.mat-datepicker-toggle-default-icon) {
   color: transparent !important;
   background-image: url("assets/calendar-clock\ \(1\).svg") !important;
   fill: transparent !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: 15px 15px !important;
-  width: 15px !important;
-  height: 15px !important;
+  display: block !important;
   margin-left: auto !important;
-} */
+}
+
+.mat-datepicker-toggle-default-icon {
+  display: none !important;
+}
 
 /************************************ TABS ************************************/
 .mdc-tab {
@@ -1263,7 +1255,6 @@ mat-label {
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   font-weight: var(--font-weight-semi-bold);
-  /
 }
 
 .mdc-tab--active {
@@ -1354,13 +1345,9 @@ mat-grid-list {
   border-radius: 12px;
   display: flex;
   flex-direction: column !important;
-  /* align-items: flex-start; */
-  /* gap: 21px; */
-  /* padding: 23px 0px 23px 23px; */
   min-width: 174px;
   padding: 13px 11px 13px 11px !important;
   margin: 0 !important;
-  /* width: min-content !important; */
 }
 
 [cdkMenuBar] {
