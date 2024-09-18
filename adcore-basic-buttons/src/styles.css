@@ -341,7 +341,6 @@ body {
   --mat-tab-header-inactive-hover-label-text-color: var(--squid-ink);
   --mat-tab-header-inactive-focus-label-text-color: var(--squid-ink);
   --mdc-tab-indicator-active-indicator-color: transparent !important;
-
   /*sidenav*/
   --mat-sidenav-container-background-color: #faf9fd;
   --mat-sidenav-container-text-color: var(--squid-ink);
@@ -467,7 +466,9 @@ button.mat-mdc-stroked-button:hover {
 mat-icon {
   transition: transform 0.3s ease;
 }
-
+.mat-mdc-raised-button > .mat-icon {
+  margin-top: 2px !important;
+}
 /************************************ CARDS ************************************/
 mat-card {
   border: none !important;
@@ -1103,7 +1104,18 @@ h3 {
 .mdc-switch__icon {
   display: none;
 }
+.mdc-switch__ripple {
+  transform: unset !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
 
+.mat-mdc-slide-toggle
+  .mdc-switch:active:not(.mdc-switch--disabled)
+  .mdc-switch__handle {
+  width: 24px !important;
+  height: 24px !important;
+}
 .mat-mdc-slide-toggle .mat-internal-form-field {
   --mat-switch-label-text-color: var(--squid-ink);
   --mat-switch-label-text-font: var(--font-family);
@@ -1202,6 +1214,43 @@ mat-label {
   display: flex !important;
 }
 
+.mat-calendar-next-button {
+  color: transparent !important;
+  background-image: url("assets/keyboard_arrow_right.svg") !important;
+  fill: transparent !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: block !important;
+  margin-left: auto !important;
+}
+
+.mat-calendar-previous-button {
+  color: transparent !important;
+  background-image: url("assets/keyboard_arrow_left\ 1.svg") !important;
+  fill: transparent !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: block !important;
+  margin-left: auto !important;
+}
+
+.mat-calendar-arrow {
+  color: transparent !important;
+  background-image: url("assets/keyboard_arrow_down.svg") !important ;
+  fill: transparent !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: block !important;
+  margin-left: 10px !important;
+  margin-top: 8px !important;
+}
+
+.mat-mdc-button .mdc-button__label {
+  display: flex !important;
+}
 .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
   > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
     .mat-calendar-body-comparison-identical
@@ -1244,21 +1293,24 @@ mat-label {
 }
 
 /************************************ TABS ************************************/
-.mdc-tab {
-  border: 1px solid var(--light-grey) !important;
 
+.mdc-tab {
   border-radius: 3px !important;
   top: 1.5px !important;
   margin-right: 9px !important;
   background-color: #f2f2f2 !important;
+  background-color: transparent !important;
+  box-sizing: border-box !important;
+  border-top: 1px solid var(--light-grey) !important;
+  border-left: 1px solid var(--light-grey) !important;
+  border-right: 1px solid var(--light-grey) !important;
+  border-bottom: none !important;
 }
-
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   font-weight: var(--font-weight-semi-bold);
 }
 
 .mdc-tab--active {
-  z-index: 1 !important;
   background-color: var(--white) !important;
 }
 
