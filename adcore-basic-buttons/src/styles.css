@@ -560,6 +560,10 @@ mat-card {
 }
 
 /************************************ INPUT ************************************/
+/*
+* every component that uses mat-form-field sould include in the HTML appearance="outlined".
+* relevant not only here but in other components as well.
+*/
 .mat-mdc-form-field {
   --mdc-outlined-text-field-container-shape: var(
     --input-border-radius
